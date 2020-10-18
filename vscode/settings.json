@@ -57,6 +57,7 @@
 
     // Folder & Files
     "files.associations": {
+        "*.aliases": "shellscript",
         "*.blade.php": "blade",
         "*.php": "php"
     },
