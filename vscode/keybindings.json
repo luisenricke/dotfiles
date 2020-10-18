@@ -1,0 +1,40 @@
+[
+    // Side bar
+    { "key": "ctrl+0", "command": "workbench.action.focusSideBar"  },
+
+    { "key": "ctrl+oem_5", "command": "workbench.action.toggleSidebarVisibility" },
+    { "key": "ctrl+b", "command": "-workbench.action.toggleSidebarVisibility" },
+
+    // Files
+    { "key": "ctrl+f4", "command": "workbench.action.closeActiveEditor" },
+    { "key": "ctrl+n", "command": "extension.advancedNewFile" },
+
+    // Editor
+    { "key": "ctrl+alt+l", "command": "editor.action.reindentlines" },
+
+    { "key": "alt+j", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
+    { "key": "ctrl+d", "command": "-editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
+
+    { "key": "ctrl+w", "command": "editor.action.smartSelect.expand", "when": "editorTextFocus" },
+    { "key": "shift+alt+right", "command": "-editor.action.smartSelect.expand", "when": "editorTextFocus" },
+
+    // Comment
+    { "key": "alt+z", "command": "editor.action.commentLine", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "ctrl+oem_2", "command": "-editor.action.commentLine", "when": "editorTextFocus && !editorReadonly" },
+
+    { "key": "shift+alt+z", "command": "editor.action.blockComment", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "shift+alt+a", "command": "-editor.action.blockComment", "when": "editorTextFocus && !editorReadonly" },
+
+    // Panes
+    { "key": "ctrl+1", "command": "workbench.action.focusFirstEditorGroup" },
+    { "key": "ctrl+2", "command": "workbench.action.focusSecondEditorGroup" },
+
+    { "key": "alt+shift+1", "command": "workbench.action.editorLayoutSingle" },
+    { "key": "alt+shift+2", "command": "workbench.action.editorLayoutTwoColumns" },
+
+    { "key": "ctrl+alt+right", "command": "workbench.action.moveEditorToNextGroup" },
+    { "key": "ctrl+alt+left", "command": "workbench.action.moveEditorToPreviousGroup" },
+
+
+
+]

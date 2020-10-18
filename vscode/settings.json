@@ -1,0 +1,200 @@
+{
+    "sync.gist": "6aa79c0ed2c0f271a2b343805b35d85a",
+
+    // Theme
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.iconTheme": "helium-icon-theme",
+    "workbench.editor.highlightModifiedTabs": true,
+
+    // Font
+    "editor.fontFamily": "Fira Code, DejaVu Sans Mono, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+
+    // Configs
+    "workbench.settings.editor": "json",
+    "window.title": "${activeEditorShort} ${separator}  ${rootName}",
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 0.85,
+    "explorer.sortOrder": "type",
+
+    // Editor
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 200,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorWidth": 2,
+    "explorer.openEditors.visible": 0,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+
+    // Minimap
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 150,
+    "editor.minimap.showSlider": "mouseover",
+    "editor.formatOnPaste": true,
+
+    // Telemetry & suggestions
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "extensions.ignoreRecommendations": true,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // Language
+    "spellright.language": ["es", "en"],
+    "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+    "spellright.statusBarIndicator": false,
+    "spellright.notificationClass":"hint",
+    "markdownlint.config": { "MD033": false },
+
+    // Code
+    "color-highlight.matchWords": true,
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    "auto-close-tag.SublimeText3Mode": true,
+    "blade.format.enable": true,
+
+    // Folder & Files
+    "files.associations": {
+        "*.blade.php": "blade",
+        "*.php": "php"
+    },
+
+    // wsl
+    "remote.WSL.useShellEnvironment": false,
+
+    "files.exclude": {
+        "**/.git/**": true,
+        "**/node_modules/**": true,
+        "**/bower_components": true,
+        "**/.cache/**": true,
+        "**/vendor/**": true,
+        "**/artisan": true,
+        "**/build/**": true,
+        "**/.gradle/**": true,
+        "**/.idea/**": true,
+        "**/.dll": true,
+        "**/.DS_Store": true
+    },
+
+    "files.watcherExclude": {
+        "**/.vscode/**": true,
+        "**/.git/**": true,
+        "**/node_modules/**": true,
+        "**/bower_components": true,
+        "**/.cache/**": true,
+        "**/vendor/**": true,
+        "**/storage/**/*.php": true,
+        "**/artisan": true,
+        "**/composer.lock": true,
+        "**/build/**": true,
+        "**/libs/**": true,
+        "**/.gradle/**": true,
+        "**/.idea/**": true,
+        "**/.DS_Store": true,
+        "**/log/**": true,
+        "**/logs/**": true,
+        "**/*.log": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+    },
+
+    "search.exclude": {
+        "**/.vscode/**": true,
+        "**/.git/**": true,
+        "**/node_modules/**": true,
+        "**/bower_components": true,
+        "**/.cache/**": true,
+        "**/vendor/**": true,
+        "**/storage/**/*.php": true,
+        "**/artisan": true,
+        "**/composer.lock": true,
+        "**/build/**": true,
+        "**/libs/**": true,
+        "**/.gradle/**": true,
+        "**/.idea/**": true,
+        "**/.DS_Store": true,
+        "**/log/**": true,
+        "**/logs/**": true,
+        "**/*.log": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true
+    },
+
+    "advancedNewFile.exclude": {
+        ".git": true,
+        "node_modules": true,
+        "bower_components": true,
+        ".cache": true,
+        "vendor": true,
+        "build": true,
+        "libs": true,
+        ".idea": true,
+        ".vscode": true,
+        "log": true,
+        "logs": true
+    },
+
+    "todohighlight.exclude": [
+        "**/.vscode/**",
+        "**/.git/**",
+        "**/node_modules/**",
+        "**/bower_components",
+        "**/.cache/**",
+        "**/vendor/**",
+        "**/storage/**/*.php",
+        "**/artisan",
+        "**/composer.lock",
+        "**/build/**",
+        "**/libs/**",
+        "**/.gradle/**",
+        "**/.idea/**",
+        "**/.DS_Store",
+        "**/log/**",
+        "**/logs/**",
+        "**/*.log",
+        "**/.svn",
+        "**/.hg",
+        "**/CVS"
+    ],
+
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.blase.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+
+    // Highlight keywords
+    "todohighlight.keywords": [
+        {
+            "text": "TODO",
+            "color": "#000",
+            "backgroundColor": "#FFCC5C",
+            "isWholeLine": false,
+            "overviewRulerColor": "#FFCC5C"
+        },
+        {
+            "text": "FIXME",
+            "color": "#000",
+            "backgroundColor": "#FF6F69",
+            "isWholeLine": false,
+            "overviewRulerColor": "#FF6F69"
+        },
+        {
+            "text": "CHECK",
+            "color": "#000",
+            "backgroundColor": "#acdeaa",
+            "isWholeLine": false,
+            "overviewRulerColor": "#acdeaa"
+        }
+    ],
+}
