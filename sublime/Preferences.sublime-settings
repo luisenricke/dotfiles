@@ -1,0 +1,55 @@
+{
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.sublime-workspace",
+		"*.lock",
+		"artisan",
+		"*.log",
+		"*.hg",
+		"*.svn",
+		"*.dll",
+		".DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		"node_modules",
+		"bower_components",
+		"cache",
+		"vendor",
+		"build",
+		".gradle",
+		".idea",
+		".svn",
+		".hg",
+		"CVS"
+	],
+	"font_face": "Fira Code",
+	"font_size": 10,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": true,
+	"ignored_packages":
+	[
+		"Sublime Linter",
+		"Vintage"
+	],
+	"material_theme_big_fileicons": true,
+	"material_theme_bullet_tree_indicator": true,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_contrast_mode": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"material_theme_tabs_separator": true,
+	"material_theme_titlebar": true,
+	"save_on_focus_lost": true,
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"ui_scale": 0.85,
+	"word_wrap": false
+}
