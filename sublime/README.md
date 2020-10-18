@@ -4,12 +4,13 @@ Backup my setup
 
 ## Files
 
-- keybindings -
+- keybindings 
 	* Linux: 'Default (Linux).sublime-keymap'
 	* Windows: 
-- settings
+- settings 
 	* General: Preferences.sublime-settings
-	* Others:
+	* Guna: Guna.sublime-settings
+    * GitGutter: GitGutter.sublime-settings
 
 - packages - 'Package Control.sublime-settings'
 

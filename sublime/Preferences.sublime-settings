@@ -1,4 +1,5 @@
 {
+	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -28,7 +29,16 @@
 		"CVS"
 	],
 	"font_face": "Fira Code",
-	"font_size": 10,
+	"font_options":
+	[
+		"dlig"
+	],
+	"font_size": 11,
+	"gn_hide_tab_dropdown": true,
+	"gn_overlay_scroll_bars": true,
+	"gn_sidebar_box": true,
+	"gn_title_bar": true,
+	"gnwidgx": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": true,
@@ -36,6 +46,17 @@
 	[
 		"Sublime Linter",
 		"Vintage"
+	],
+	"index_exclude_patterns":
+	[
+		"*.sublime-workspace",
+		"*.lock",
+		"artisan",
+		"*.log",
+		"*.hg",
+		"*.svn",
+		"*.dll",
+		".DS_Store"
 	],
 	"material_theme_big_fileicons": true,
 	"material_theme_bullet_tree_indicator": true,
@@ -47,7 +68,9 @@
 	"material_theme_tabs_separator": true,
 	"material_theme_titlebar": true,
 	"save_on_focus_lost": true,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"show_encoding": true,
+	"show_full_path": false,
+	"theme": "Guna.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"ui_scale": 0.85,
