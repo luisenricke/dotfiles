@@ -1,2 +1,5 @@
+
+alias cd~='cd ~'
+
 # Laravel command
 alias phpa='php artisan'
