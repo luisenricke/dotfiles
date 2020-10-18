@@ -1,0 +1,89 @@
+//  https://aka.ms/terminal-documentation
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "defaultProfile": "{ GUID }",
+
+  "theme": "dark",
+  "initialCols": 100,
+  "initialRows": 20,
+  "largePasteWarning": false,
+  "multiLinePasteWarning": false,
+
+  // https://aka.ms/terminal-profile-settings
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Tinacious Design (Dark)",
+      "fontSize": 12,
+      "fontFace": "Anonymous Pro",
+      "useAcrylic": true,
+      "acrylicOpacity": 0.75
+    },
+    "list": [
+      {
+        "guid": "{ GUID ",
+        "name": "Ubuntu",
+        "hidden": false,
+        "source": "Windows.Terminal.Wsl",
+
+        // Specific configurations
+        "cursorShape": "emptyBox",
+        "cursorColor": "#ffffff",
+        "selectionBackground": "#FFFFFF",
+      },
+      {
+        "guid": "{ GUID }",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{ GUID }",
+        "name": "Símbolo del sistema",
+        "commandline": "cmd.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{ GUID }",
+        "hidden": true,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      }
+    ]
+  },
+
+  // https://aka.ms/terminal-color-schemes
+  // https://windowsterminalthemes.dev/
+  "schemes": [
+    {
+      "name":           "Tinacious Design (Dark)",
+      "black":        "#1d1d26",
+      "red":          "#ff3399",
+      "green":        "#00d364",
+      "yellow":       "#ffcc66",
+      "blue":         "#1d1d26",
+      "purple":       "#cc66ff",
+      "cyan":         "#00ceca",
+      "white":        "#cbcbf0",
+      "brightBlack":  "#636667",
+      "brightRed":    "#ff2f92",
+      "brightGreen":  "#00d364",
+      "brightYellow": "#ffd479",
+      "brightBlue":   "#00cbff",
+      "brightPurple": "#d783ff",
+      "brightCyan":   "#00d5d4",
+      "brightWhite":  "#d5d6f3",
+      "background":   "#1d1d26",
+      "foreground":   "#cbcbf0"
+    }
+  ],
+
+  // "https://aka.ms/terminal-keybindings
+  "actions": [
+    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+    { "command": "paste", "keys": "ctrl+v" },
+    { "command": "find", "keys": "ctrl+shift+f" },
+    { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+    { "command": "openSettings", "keys": "ctrl+," },
+    { "command": { "action": "openSettings", "target": "defaultsFile" }, "keys": "ctrl+alt+," }
+  ]
+}
