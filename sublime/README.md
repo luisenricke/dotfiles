@@ -26,4 +26,4 @@ All extensions availables are in ``Package Control.sublime-settings``, just need
 
 - Install
 
-Format the file ``Package Control.sublime-settings`` and only leave the names with comma separation
+Format the file ``Package Control.sublime-settings`` and only leave the names with comma separation and use ``Advanced Install Package`` tool.
