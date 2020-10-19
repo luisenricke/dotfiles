@@ -1,16 +1,29 @@
-# Configuration Sublime
+# Sublime Text 3
 
-Backup my setup
+## Location files
 
-## Files
+- Windows
+  - %WINDOWS_HOME%/AppData/Roaming/Sublime Text 3/Packages/User
+    - Default (Windows).sublime-keymap
+    - Preferences.sublime-settings
+    - Guna.sublime-settings
+    - GitGutter.sublime-settings
+    - Package Control.sublime-settings
 
-- keybindings 
-	* Linux: 'Default (Linux).sublime-keymap'
-	* Windows: 
-- settings 
-	* General: Preferences.sublime-settings
-	* Guna: Guna.sublime-settings
-    * GitGutter: GitGutter.sublime-settings
+- Unix/Linux
+  - ~/.config/sublime-text-3/Packages/User
+    - Default (Linux).sublime-keymap
+    - Preferences.sublime-settings
+    - Guna.sublime-settings
+    - GitGutter.sublime-settings
+    - Package Control.sublime-settings
 
-- packages - 'Package Control.sublime-settings'
+## Externsions
 
+- Backup
+
+All extensions availables are in ``Package Control.sublime-settings``, just need to save this file.
+
+- Install
+
+Format the file ``Package Control.sublime-settings`` and only leave the names with comma separation
