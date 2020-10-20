@@ -1,5 +1,25 @@
+alias _='sudo'
 
+# Navigation
 alias cd~='cd ~'
+alias ...='../..'
+alias ....='../../..'
 
-# Laravel command
+# Files & Directories
+alias ls='ls --color=tty'
+alias la='ls -Ah'
+alias ll='ls -lAh'
+
+alias md='mkdir -pv'
+alias rd='rm -ri'
+alias rdf='rm -rv'
+
+# Programs 
+alias g='git'
+
+# PHP env
+alias composer-ignore='composer --ignore-platform-reqs'
 alias phpa='php artisan'
+
+# Other
+

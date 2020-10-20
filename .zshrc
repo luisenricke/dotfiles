@@ -21,6 +21,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Load alias
+unalias -m '*'
+
 if [ -f ~/.aliases ]; then
 	. ~/.aliases;
 fi
+
