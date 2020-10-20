@@ -1,4 +1,6 @@
 alias _='sudo'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
 
 # Navigation
 alias cd~='cd ~'
@@ -22,4 +24,3 @@ alias composer-ignore='composer --ignore-platform-reqs'
 alias phpa='php artisan'
 
 # Other
-
