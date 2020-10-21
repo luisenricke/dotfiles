@@ -18,6 +18,7 @@ alias rdf='rm -rv'
 
 # Programs 
 alias g='git'
+alias mysql_='mysql -u root -p'
 
 # PHP env
 alias composer-ignore='composer --ignore-platform-reqs'
