@@ -23,5 +23,6 @@ alias mysql_='mysql -u root -p'
 # PHP env
 alias composer-ignore='composer --ignore-platform-reqs'
 alias phpa='php artisan'
+alias phpa-clear='php artisan config:clear && php artisan cache:clear && php artisan event:clear && php artisan route:clear && php artisan view:clear'
 
 # Other
