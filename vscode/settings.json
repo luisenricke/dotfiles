@@ -58,6 +58,7 @@
     // Folder & Files
     "files.associations": {
         "*.aliases": "shellscript",
+        "*.doskey": "shellscript",
         "*.blade.php": "blade",
         "*.php": "php"
     },
