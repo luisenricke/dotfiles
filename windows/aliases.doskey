@@ -1,10 +1,4 @@
-;= ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;= ~~~~~~~~~~~~~~~~~~~~ INSTRUCTIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~
-;= ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-;= 1. Put this file in %USERPROFILE%
-;= 2. Run aliases-doskey.reg
-;= 3. Close and re-open another console and test it
-;= ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ;= ~~~~~~~~~~~~~~~~~~~~ Windows ~~~~~~~~~~~~~~~~~~~~
 
@@ -14,6 +8,7 @@ service=services.msc
 alias=more "%USERPROFILE%\aliases.doskey"
 alias-edit=editor "%USERPROFILE%\aliases.doskey"
 
+cdp=cd %_projects%
 
 ;= ~~~~~~~~~~~~~~~~~~~~ Linux/Unix ~~~~~~~~~~~~~~~~~~~~
 
@@ -24,6 +19,7 @@ history=doskey /history
 
 tasks-=tasklist /FO TABLE /FI "STATUS eq RUNNING"
 kill=taskkill /T /IM $*
+
 
 ;= ~~~~~~~~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~~~~~~~~
 
@@ -56,6 +52,7 @@ g=git $*
 
 composer-ignore=composer --ignore-platform-reqs $*
 phpa=php artisan $*
+alias phpa-clear=php artisan config:clear && php artisan cache:clear && php artisan event:clear && php artisan route:clear && php artisan view:clear
 
 mysql_="C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql" -u root -p
 psql_="C:\Program Files\PostgreSQL\12\bin\psql" -U postgres -h localhost -p 5432
