@@ -1,8 +1,31 @@
+# support functions
+download_font_from_1001fonts() {
+    local user=$1
+    local url=$2
+    local output_file=$3
+    local output_directory=$4
+
+    curl $url -L -o $output_file
+    unzip $output_file "*.ttf" -d $output_directory
+    chown $user:$user $output_directory
+    rm $output_file
+    mv $output_directory /usr/local/share/fonts
+}
+
 
 # IMPORTANT 
 #   1. run with root user
 #   2. enable 'Non-DFSG-compatible Software (non-free)'
+
+# AFTER RUN
+#   - set up git and github ssh
+#       * https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+#       * https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+
 USER_DEFAULT="luisenricke"
+
+FIRA_CODE_VERSION="5.2"
+FIRA_CODE_FILE="Fira_Code_v$FIRA_CODE_VERSION.zip"
 
 cd /home/$USER_DEFAULT/
 
@@ -36,17 +59,15 @@ apt install apt-transport-https ca-certificates software-properties-common -y
 
 
 # fonts
-curl https://ff.static.1001fonts.net/a/n/anonymous-pro.regular.ttf -o anonymous-pro.regular.ttf
-mv anonymous-pro.regular.ttf /usr/local/share/fonts/
+curl https://github.com/tonsky/FiraCode/releases/download/$FIRA_CODE_VERSION/$FIRA_CODE_FILE -L -o $FIRA_CODE_FILE
+chown $USER_DEFAULT:$USER_DEFAULT $FIRA_CODE_FILE
+unzip $FIRA_CODE_FILE "ttf/*"
+rm $FIRA_CODE_FILE
+mv ttf FiraCode
+mv FiraCode/ /usr/local/share/fonts
 
-curl https://ff.static.1001fonts.net/a/n/anonymous-pro.italic.ttf -o anonymous-pro.italic.ttf
-mv anonymous-pro.italic.ttf /usr/local/share/fonts/
-
-curl https://ff.static.1001fonts.net/a/n/anonymous-pro.bold.ttf -o anonymous-pro.bold.ttf
-mv anonymous-pro.bold.ttf /usr/local/share/fonts/
-
-curl https://ff.static.1001fonts.net/a/n/anonymous-pro.bold-italic.ttf -o anonymous-pro.bold-italic.ttf
-mv anonymous-pro.bold-italic.ttf /usr/local/share/fonts/
+download_font_from_1001fonts $USER_DEFAULT "https://dl.1001fonts.com/anonymous-pro.zip" "anonymous-pro.zip" "AnonymousPro"
+download_font_from_1001fonts $USER_DEFAULT "https://dl.1001fonts.com/ariesta-moon-demo.zip" "ariesta-moon-demo.zip" "AriestaMoonDemo"
 
 
 # sublime text 3
@@ -101,4 +122,12 @@ echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT
 # - apps
 #	* https://linuxtips.us/install-sublime-text-debian-10/
 #	* https://vitux.com/how-to-install-custom-fonts-in-debian/
+#       * https://stackoverflow.com/questions/48873243/curl-not-working-when-downloading-zip-file-from-github
+#       * https://unix.stackexchange.com/questions/59276/how-to-extract-only-a-specific-folder-from-a-zipped-archive-to-a-given-directory
 #
+
+unset USER_DEFAULT
+unset FIRA_CODE_VERSION
+unset FIRA_CODE_FILE
+
+unset -f download_font_from_1001fonts
