@@ -36,13 +36,16 @@ apt install apt-transport-https ca-certificates software-properties-common -y
 
 
 # fonts
-wget https://ff.static.1001fonts.net/a/n/anonymous-pro.regular.ttf
+curl https://ff.static.1001fonts.net/a/n/anonymous-pro.regular.ttf -o anonymous-pro.regular.ttf
 mv anonymous-pro.regular.ttf /usr/local/share/fonts/
-wget https://ff.static.1001fonts.net/a/n/anonymous-pro.italic.ttf
+
+curl https://ff.static.1001fonts.net/a/n/anonymous-pro.italic.ttf -o anonymous-pro.italic.ttf
 mv anonymous-pro.italic.ttf /usr/local/share/fonts/
-wget https://ff.static.1001fonts.net/a/n/anonymous-pro.bold.ttf
+
+curl https://ff.static.1001fonts.net/a/n/anonymous-pro.bold.ttf -o anonymous-pro.bold.ttf
 mv anonymous-pro.bold.ttf /usr/local/share/fonts/
-wget https://ff.static.1001fonts.net/a/n/anonymous-pro.bold-italic.ttf
+
+curl https://ff.static.1001fonts.net/a/n/anonymous-pro.bold-italic.ttf -o anonymous-pro.bold-italic.ttf
 mv anonymous-pro.bold-italic.ttf /usr/local/share/fonts/
 
 
