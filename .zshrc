@@ -1,8 +1,7 @@
-
-export ZSH="/home/debian/.oh-my-zsh"
+export ZSH="/home/luisenricke/.oh-my-zsh"
 export LANG=en_US.UTF-8
 
-ZSH_THEME="bureau"
+ZSH_THEME="minimal"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -14,7 +13,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,6 +23,5 @@ source $ZSH/oh-my-zsh.sh
 unalias -m '*'
 
 if [ -f ~/.aliases ]; then
-	. ~/.aliases;
+    . ~/.aliases;
 fi
-
