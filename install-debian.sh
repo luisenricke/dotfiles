@@ -92,7 +92,13 @@ echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT
 #	* https://linuxize.com/post/chmod-command-in-linux/
 #	* https://linuxize.com/post/linux-chown-command/
 #
+# - zsh & oh-my-zsh
+#   * https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
+#   * https://gist.github.com/dogrocker/1efb8fd9427779c827058f873b94df95
+#   * https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/
+#   * https://unix.stackexchange.com/questions/136423/making-zsh-default-shell-without-root-access
+#
 # - apps
 #	* https://linuxtips.us/install-sublime-text-debian-10/
 #	* https://vitux.com/how-to-install-custom-fonts-in-debian/
-
+#
