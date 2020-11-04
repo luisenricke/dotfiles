@@ -1,5 +1,7 @@
 
-# IMPORTANT: run with root user
+# IMPORTANT 
+#   1. run with root user
+#   2. enable 'Non-DFSG-compatible Software (non-free)'
 USER_DEFAULT="luisenricke"
 
 cd /home/$USER_DEFAULT/
