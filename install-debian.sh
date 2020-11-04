@@ -62,9 +62,22 @@ chown $USER_DEFAULT:$USER_DEFAULT .aliases
 #chmod 644 .aliases
 source .aliases
 
+echo "" >> /home/$USER_DEFAULT/.bashrc
+echo -e "if [ -f ~/.aliases ]; then\n\t. ~/.aliases;\nfi" >> /home/$USER_DEFAULT/.bashrc
+
 curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.gitconfig -o .gitconfig
 chown $USER_DEFAULT:$USER_DEFAULT .gitconfig
 #chmod 644 .gitconfig
+
+
+# zsh & oh-my-zsh
+apt install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+echo -e "export SHELL=\`which zsh\`" >> /home/$USER_DEFAULT/.bashrc
+echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT/.bashrc
+
 
 # reference
 #
