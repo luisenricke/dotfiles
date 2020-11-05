@@ -1,20 +1,14 @@
-# IMPORTANT 
-#   1. run with root user
-#   2. download dotfiles project
 
-USER_DEFAULT="luisenricke"
-DOTFILES=/home/$USER_DEFAULT/Projects/dotfiles
-SQL_ROOT=$DOTFILES/install/extra/mariadb.sql
+SQL_ROOT=~/Projects/dotfiles/install/extra/mariadb.sql
 
-cd /home/$USER_DEFAULT/
+sudo apt install mariadb-server -y
+sudo service mariadb start
 
-apt install mariadb-server -y
+if [ -f $SQL_ROOT  ]; then
+    echo -e "\n Change root password \n"
+    mariadb -u root < $SQL_ROOT
+fi
 
-service mariadb start
-mariadb -u root < $SQL_ROOT
-
-unset USER_DEFAULT
-unset DOTFILES
 unset SQL_ROOT
 
 # reference
