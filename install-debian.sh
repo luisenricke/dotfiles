@@ -103,15 +103,15 @@ echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT
 # reference
 #
 # - sudo
-# 	* https://tecnoysoft.com/es/configurar-sudo-en-debian/
-# 	* https://stackoverflow.com/questions/16823591/how-to-add-lines-to-end-of-file-on-linux
+#   * https://tecnoysoft.com/es/configurar-sudo-en-debian/
+#   * https://stackoverflow.com/questions/16823591/how-to-add-lines-to-end-of-file-on-linux
 #
 # - date & time
-#	* https://www.cyberciti.biz/faq/howto-set-date-time-from-linux-command-prompt/
+#   * https://www.cyberciti.biz/faq/howto-set-date-time-from-linux-command-prompt/
 #
 # - permissions
-#	* https://linuxize.com/post/chmod-command-in-linux/
-#	* https://linuxize.com/post/linux-chown-command/
+#   * https://linuxize.com/post/chmod-command-in-linux/
+#   * https://linuxize.com/post/linux-chown-command/
 #
 # - zsh & oh-my-zsh
 #   * https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
@@ -120,12 +120,18 @@ echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT
 #   * https://unix.stackexchange.com/questions/136423/making-zsh-default-shell-without-root-access
 #
 # - apps
-#	* https://linuxtips.us/install-sublime-text-debian-10/
-#	* https://vitux.com/how-to-install-custom-fonts-in-debian/
-#       * https://stackoverflow.com/questions/48873243/curl-not-working-when-downloading-zip-file-from-github
-#       * https://unix.stackexchange.com/questions/59276/how-to-extract-only-a-specific-folder-from-a-zipped-archive-to-a-given-directory
+#   * https://linuxtips.us/install-sublime-text-debian-10/
+#   * https://vitux.com/how-to-install-custom-fonts-in-debian/
 #
+# - functions
+#   * https://bash.cyberciti.biz/guide/Pass_arguments_into_a_function
+#
+# - unzip
+#   * https://stackoverflow.com/questions/48873243/curl-not-working-when-downloading-zip-file-from-github
+#   * https://unix.stackexchange.com/questions/59276/how-to-extract-only-a-specific-folder-from-a-zipped-archive-to-a-given-directory
 
+
+# clean declarations
 unset USER_DEFAULT
 unset FIRA_CODE_VERSION
 unset FIRA_CODE_FILE
