@@ -100,6 +100,7 @@ echo -e "export SHELL=\`which zsh\`" >> /home/$USER_DEFAULT/.bashrc
 echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT/.bashrc
 
 
+
 # reference
 #
 # - sudo
