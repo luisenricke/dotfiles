@@ -1,7 +1,7 @@
 {
 	"caret_style": "phase",
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-	"draw_white_space": "all",
+	"draw_white_space": "selection",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -28,7 +28,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Fira Code",
+	"font_face": "Source Code Pro",
 	"font_options":
 	[
 		"dlig"
@@ -38,10 +38,11 @@
 	"gn_overlay_scroll_bars": true,
 	"gn_sidebar_box": true,
 	"gn_title_bar": true,
+	"gnwidgo": true,
 	"gnwidgx": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"hot_exit": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Sublime Linter",
