@@ -39,6 +39,8 @@ download_font_from_1001fonts "https://dl.1001fonts.com/anonymous-pro.zip" "anony
 # Ariesta Moon Demo
 download_font_from_1001fonts "https://dl.1001fonts.com/ariesta-moon-demo.zip" "ariesta-moon-demo.zip" "AriestaMoonDemo"
 
+# Source Code Pro
+download_font_from_1001fonts "https://dl.1001fonts.com/source-code-pro.zip" "source-code-pro.zip" "SourceCodePro"
 
 # reference
 # 
