@@ -1,95 +1,49 @@
-# support functions
-download_font_from_1001fonts() {
-    local user=$1
-    local url=$2
-    local output_file=$3
-    local output_directory=$4
-
-    curl $url -L -o $output_file
-    unzip $output_file "*.ttf" -d $output_directory
-    chown $user:$user $output_directory
-    rm $output_file
-    mv $output_directory /usr/local/share/fonts
-}
-
-
 # IMPORTANT 
-#   1. run with root user
+#   1. run with user to config
 #   2. enable 'Non-DFSG-compatible Software (non-free)'
 
-# AFTER RUN
-#   - set up git and github ssh
-#       * https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-#       * https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+DOTFILES=~/Projects/dotfiles
 
-USER_DEFAULT="luisenricke"
-
-FIRA_CODE_VERSION="5.2"
-FIRA_CODE_FILE="Fira_Code_v$FIRA_CODE_VERSION.zip"
-
-cd /home/$USER_DEFAULT/
-
-
-# update & upgrade
-apt update
-apt upgrade -y
-
+cd ~
 
 # install & config sudo
-apt install sudo -y
+su -c 'apt install sudo -y'
+su -c 'echo -e "\n$USER ALL=(ALL) ALL\n" >> /etc/sudoers'
 
-echo "" >> /etc/sudoers
-echo "$USER_DEFAULT ALL=(ALL) ALL" >> /etc/sudoers
+# update & upgrade
+sudo apt update
+sudo apt upgrade -y
 
+# utility
+if [ -d ~/Projects/dotfiles ]; then
+    source $DOTFILES/install/toolkit-packages.sh
+    source $DOTFILES/install/font.sh
+    source $DOTFILES/install/mariadb.sh
+fi
 
-# config date & time
-timedatectl set-timezone 'America/Mexico_City'
-timedatectl set-ntp yes
+# personal configurations
+if [ ! -f ~/.aliases  ]; then
+    echo -e "\n Apply aliases \n"
 
-
-# apps
-apt install synaptic -y # Check the latest microcode
-apt install build-essential dkms linux-headers-$(uname -r) -y
-apt install vlc -y
-apt install rar unrar -y
-apt install font-manager -y
-apt install git -y
-apt install curl -y
-apt install apt-transport-https ca-certificates software-properties-common -y
-
-
-# fonts
-curl https://github.com/tonsky/FiraCode/releases/download/$FIRA_CODE_VERSION/$FIRA_CODE_FILE -L -o $FIRA_CODE_FILE
-chown $USER_DEFAULT:$USER_DEFAULT $FIRA_CODE_FILE
-unzip $FIRA_CODE_FILE "ttf/*"
-rm $FIRA_CODE_FILE
-mv ttf FiraCode
-mv FiraCode/ /usr/local/share/fonts
-
-download_font_from_1001fonts $USER_DEFAULT "https://dl.1001fonts.com/anonymous-pro.zip" "anonymous-pro.zip" "AnonymousPro"
-download_font_from_1001fonts $USER_DEFAULT "https://dl.1001fonts.com/ariesta-moon-demo.zip" "ariesta-moon-demo.zip" "AriestaMoonDemo"
+    if [ -d ~/Projects/dotfiles ]; then
+        cp $DOTFILES/.aliases ~
+    else
+        curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.aliases -o .aliases
+    fi
+    
+    source .aliases
+    
+    if [ -f ~/.bashrc ]; then
+        sudo echo -e "\nif [ -f ~/.aliases ]; then\n\t. ~/.aliases;\nfi\n" >> ~/.bashrc
+    fi
+fi
 
 
 # sublime text 3
 curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
-apt update
-apt install sublime-text
-
-
-# configs
-curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.aliases -o .aliases
-chown $USER_DEFAULT:$USER_DEFAULT .aliases
-#chmod 644 .aliases
-source .aliases
-
-echo "" >> /home/$USER_DEFAULT/.bashrc
-echo -e "if [ -f ~/.aliases ]; then\n\t. ~/.aliases;\nfi" >> /home/$USER_DEFAULT/.bashrc
-
-curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.gitconfig -o .gitconfig
-chown $USER_DEFAULT:$USER_DEFAULT .gitconfig
-#chmod 644 .gitconfig
-
+sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo apt update
+sudo apt install sublime-text
 
 # zsh & oh-my-zsh
 apt install zsh -y
@@ -99,6 +53,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 echo -e "export SHELL=\`which zsh\`" >> /home/$USER_DEFAULT/.bashrc
 echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT/.bashrc
 
+# config
+timedatectl set-timezone 'America/Mexico_City'
+timedatectl set-ntp yes
+
+
+## clean declarations
+unset DOTFILES
 
 
 # reference
@@ -106,6 +67,7 @@ echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT
 # - sudo
 #   * https://tecnoysoft.com/es/configurar-sudo-en-debian/
 #   * https://stackoverflow.com/questions/16823591/how-to-add-lines-to-end-of-file-on-linux
+#   * https://stackoverflow.com/questions/11636840/changing-to-root-user-inside-shell-script
 #
 # - date & time
 #   * https://www.cyberciti.biz/faq/howto-set-date-time-from-linux-command-prompt/
@@ -122,19 +84,3 @@ echo -e "[ -z \"\$ZSH_VERSION\" ] && exec \"\$SHELL\" -l" >> /home/$USER_DEFAULT
 #
 # - apps
 #   * https://linuxtips.us/install-sublime-text-debian-10/
-#   * https://vitux.com/how-to-install-custom-fonts-in-debian/
-#
-# - functions
-#   * https://bash.cyberciti.biz/guide/Pass_arguments_into_a_function
-#
-# - unzip
-#   * https://stackoverflow.com/questions/48873243/curl-not-working-when-downloading-zip-file-from-github
-#   * https://unix.stackexchange.com/questions/59276/how-to-extract-only-a-specific-folder-from-a-zipped-archive-to-a-given-directory
-
-
-# clean declarations
-unset USER_DEFAULT
-unset FIRA_CODE_VERSION
-unset FIRA_CODE_FILE
-
-unset -f download_font_from_1001fonts
