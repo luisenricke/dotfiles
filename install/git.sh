@@ -1,11 +1,7 @@
-
-sudo apt install git -y
-sudo apt install xclip -y
+su -c 'apt install git xclip -y'
 
 if [ ! -d ~/.ssh  ]; then
-    
-    echo ""
-    echo "Enter your email"
+    echo -e "\n Enter your email \n"
     read EMAIL
 
     ssh-keygen -t ed25519 -C $EMAIL
@@ -20,6 +16,7 @@ if [ ! -d ~/.ssh  ]; then
     echo "Add your key in GitHub https://github.com/settings/ssh/new"
     echo "Or in other pages"
     echo "When you are ready to continue, press [ENTER] key"
+    echo ""
     read 
 
     unset EMAIL
@@ -45,7 +42,6 @@ if [ ! -f ~/.gitconfig ]; then
         #chmod 644 .gitconfig
     fi
 fi
-
 
 # reference 
 # 
