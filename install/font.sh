@@ -42,7 +42,12 @@ download_font_from_1001fonts "https://dl.1001fonts.com/ariesta-moon-demo.zip" "a
 # Source Code Pro
 download_font_from_1001fonts "https://dl.1001fonts.com/source-code-pro.zip" "source-code-pro.zip" "SourceCodePro"
 
+
 # reference
 # 
 # * https://vitux.com/how-to-install-custom-fonts-in-debian/
 # * https://bash.cyberciti.biz/guide/Pass_arguments_into_a_function
+#
+# - unzip
+#   * https://stackoverflow.com/questions/48873243/curl-not-working-when-downloading-zip-file-from-github
+#   * https://unix.stackexchange.com/questions/59276/how-to-extract-only-a-specific-folder-from-a-zipped-archive-to-a-given-directory
