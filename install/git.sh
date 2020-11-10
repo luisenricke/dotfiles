@@ -35,16 +35,15 @@ if [ ! -d ~/Projects/dotfiles ]; then
     git clone git@github.com:luisenricke/dotfiles.git ~/Projects/dotfiles
 fi
 
-# options to config .gitignore
-if [ ! -f ~/.gitconfig ] && [ -d ~/Projects/dotfiles ]; then
-    echo -e "\n Import '.gitconfig' file from dotfiles directory \n"
-    cp ~/Projects/dotfiles/.gitconfig ~/.gitconfig
-fi
-
-if [ ! -f ~/.gitconfig ] && [ ! -d ~/Projects/dotfiles ]; then
-    echo -e "\n Import '.gitconfig' file from dotfiles repository \n"
-    curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.gitconfig -o .gitconfig
-    #chmod 644 .gitconfig
+if [ ! -f ~/.gitconfig ]; then
+    if [ -d ~/Projects/dotfiles ]; then
+        echo -e "\n Import '.gitconfig' file from dotfiles directory \n"
+        cp ~/Projects/dotfiles/.gitconfig ~/.gitconfig
+    else
+        echo -e "\n Import '.gitconfig' file from dotfiles repository \n"
+        curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.gitconfig -o .gitconfig
+        #chmod 644 .gitconfig
+    fi
 fi
 
 
