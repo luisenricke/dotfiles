@@ -1,14 +1,12 @@
 {
-    "sync.gist": "6aa79c0ed2c0f271a2b343805b35d85a",
-
     // Theme
     "workbench.colorTheme": "Tokyo Night",
     "workbench.iconTheme": "helium-icon-theme",
     "workbench.editor.highlightModifiedTabs": true,
 
     // Font
-    "editor.fontFamily": "Fira Code, DejaVu Sans Mono, Consolas, 'Courier New', monospace",
-    "editor.fontSize": 14,
+    "editor.fontFamily": "Source Code Pro, Fira Code, Consolas",
+    "editor.fontSize": 13,
     "editor.fontLigatures": true,
 
     // Configs
@@ -22,7 +20,7 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 200,
-    "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "selection",
     "editor.cursorWidth": 2,
     "explorer.openEditors.visible": 0,
     "files.insertFinalNewline": true,
@@ -46,7 +44,7 @@
     "spellright.language": ["es", "en"],
     "spellright.documentTypes": ["markdown", "latex", "plaintext"],
     "spellright.statusBarIndicator": false,
-    "spellright.notificationClass":"hint",
+    "spellright.notificationClass": "hint",
     "markdownlint.config": { "MD033": false },
 
     // Code
@@ -198,5 +196,5 @@
             "isWholeLine": false,
             "overviewRulerColor": "#acdeaa"
         }
-    ],
+    ]
 }
