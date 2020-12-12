@@ -2,6 +2,7 @@
 #   1. run with user to config
 #   2. enable 'Non-DFSG-compatible Software (non-free)'
 
+
 DOTFILES=~/Projects/dotfiles
 
 cd ~
@@ -9,6 +10,10 @@ cd ~
 # install & config sudo
 su -c 'apt install sudo -y'
 su -c 'echo -e "\n$USER ALL=(ALL) ALL\n" >> /etc/sudoers'
+
+# enable 'Non-DFSG-compatible Software (non-free)'
+sudo apt-add-repository non-free
+#sudo apt-add-repository contrib
 
 # update & upgrade
 sudo apt update
