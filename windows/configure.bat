@@ -1,10 +1,13 @@
 @echo off
 
-echo Home folder: %USERPROFILE%
 echo.
+
+echo Home folder: %USERPROFILE%
 
 for /F "delims=" %%a in ('powershell Get-ExecutionPolicy') do set "execPolicyVerbose=%%a"
 echo Execution Policy: %execPolicyVerbose%
+
+echo.
 echo.
 
 if %execPolicyVerbose%==Restricted (
@@ -41,24 +44,30 @@ if exist C:\tools (
     if not exist C:\tools\youtube-dl.exe (
         curl https://download.microsoft.com/download/5/B/C/5BC5DBB3-652D-4DCE-B14A-475AB85EEF6E/vcredist_x86.exe -o C:\tools\MicrosoftRedistx86.exe
         echo Downloaded MicrosoftRedistx86.exe
-        echo Please install the downloades binary 'MicrosoftRedistx86.exe'
-        echo.
         echo.
 
         curl -i https://yt-dl.org/downloads/latest -o C:\tools\youtube-dl.txt
         for /F "delims=" %%a in ('findstr /R "Location:*."  C:\tools\youtube-dl.txt') do set "youtubedlLatest=%%a"
         set youtubedlLatest=%youtubedlLatest:Location: https://yt-dl.org/downloads/=%
-        echo.
         echo Clean up tmp files
         del /f C:\tools\youtube-dl.txt
         echo.
 
         echo Setting up paths
-        set PATH=%PATH%;C:\tools
-        echo.
+        rem set PATH=%PATH%;C:\tools
+        echo. 
 
         curl https://yt-dl.org/downloads/%youtubedlLatest%/youtube-dl.exe -L -o C:\tools\youtube-dl.exe
         echo Downloaded youtube-dl, version: %youtubedlLatest%
+        echo.
+
+        echo ------------------------------------------------------------
+        echo *                                                          *
+        echo * Instructions                                             *
+        echo * - Install the downloaded binary 'MicrosoftRedistx86.exe' *
+        echo * - Reboot system to apply changes                         *
+        echo *                                                          *
+        echo ------------------------------------------------------------
     )
 )
 
