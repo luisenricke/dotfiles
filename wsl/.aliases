@@ -1,3 +1,0 @@
-export WINDOWS_HOME = "" # Put user of Windows
-
-alias cd,='cd /mnt/c/Users/"${WINDOWS_HOME}/"'
