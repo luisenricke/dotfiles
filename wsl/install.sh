@@ -15,7 +15,7 @@ HOME_WINDOWS="/mnt/c/Users/$USER_WINDOWS"
 
 if [ ! -d $HOME_WINDOWS  ]; then
     forget_local_variables
-    echo "\033[0;31mError: The windows user doesnt exist"
+    echo -e "\033[0;31mError: The windows user doesnt exist"
     return
 fi
 
@@ -24,13 +24,13 @@ sudo apt upgrade -y
 echo ''
 
 # packages
-echo "\033[0;32mInstall packages"
+echo -e "\033[0;32mInstall packages"
 sudo apt install zip unzip -y
 sudo apt install curl -y
 echo ''
 
 # git
-echo "\033[0;32mInstall and configuration of git"
+echo -e "\033[0;32mInstall and configuration of git"
 sudo apt install git xclip -y
 
 if [ ! -d ~/.ssh  ]; then
@@ -53,33 +53,33 @@ fi
 
 # personal documents
 if [ ! -d $HOME_WINDOWS/Projects ]; then
-    echo "\033[0;32mCreate 'Projects' directory"
+    echo -e "\033[0;32mCreate 'Projects' directory"
     mkdir $HOME_WINDOWS/Projects
 fi
 
 if [ ! -d $HOME_WINDOWS/Projects/dotfiles ]; then
-    echo "\033[0;32mImport 'dotfiles' respository"
+    echo -e "\033[0;32mImport 'dotfiles' respository"
     git clone git@github.com:luisenricke/dotfiles.git $HOME_WINDOWS/Projects/dotfiles
 fi
 
 echo ''
 
 # MariaDB
-echo "\033[0;32mInstall mariadb"
+echo -e "\033[0;32mInstall mariadb"
 sudo apt install mariadb-server -y
 sudo service mysql start
 
 if [ -f $HOME_WINDOWS/Projects/dotfiles/wsl/mariadb.sql ]; then
-    echo "\033[0;32mChange root password of mariadb"
+    echo -e "\033[0;32mChange root password of mariadb"
     sudo mysql -u root < $HOME_WINDOWS/Projects/dotfiles/wsl/mariadb.sql
 else
-    echo "\033[0;31mError: the configuration of mariadb doesnt exist"
+    echo -e "\033[0;31mError: the configuration of mariadb doesnt exist"
 fi
 
 echo ''
 
 # Javascript
-echo "\033[0;32mInstall nvm: { node, npm: [typescript, angular] }"
+echo -e "\033[0;32mInstall nvm: { node, npm: [typescript, angular] }"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install node
 
@@ -88,7 +88,7 @@ npm install -g @angular/cli
 echo ''
 
 # JVM
-echo "\033[0;32mInstall sdkman: { java[java 8.0.275.open-adpt], groovy[3.0.6], grails[3.3.8] }"
+echo -e "\033[0;32mInstall sdkman: { java[java 8.0.275.open-adpt], groovy[3.0.6], grails[3.3.8] }"
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 8.0.275.open-adpt
@@ -102,7 +102,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 # Personal configurations
-echo "\033[0;32mSet up personal configurations"
+echo -e "\033[0;32mSet up personal configurations"
 [ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.aliases ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.aliases ~/.aliases
 source ~/.aliases
 
