@@ -20,7 +20,7 @@
     },
     "list": [
       {
-        "guid": "{ GUID ",
+        "guid": "{ GUID }",
         "name": "Ubuntu",
         "hidden": false,
         "source": "Windows.Terminal.Wsl",
