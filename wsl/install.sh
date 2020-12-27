@@ -44,7 +44,7 @@ if [ ! -d ~/.ssh  ]; then
     
     xclip -selection clipboard < ~/.ssh/id_ed25519.pub
     
-    echo "Your key is in your clipboard."
+    echo "Your key is in your clipboard"
     echo "Press any key to continue configuration"
     read 
 
@@ -62,18 +62,16 @@ if [ ! -d $HOME_WINDOWS/Projects/dotfiles ]; then
     git clone git@github.com:luisenricke/dotfiles.git $HOME_WINDOWS/Projects/dotfiles
 fi
 
-# create symbolink of .aliases
-
 echo ''
 
-# mariadb
+# MariaDB
 echo "\033[0;32mInstall mariadb"
 sudo apt install mariadb-server -y
 sudo service mysql start
 
-if [ -f $HOME_WINDOWS/Projects/dotfiles/install/extra/mariadb.sql ]; then
+if [ -f $HOME_WINDOWS/Projects/dotfiles/wsl/mariadb.sql ]; then
     echo "\033[0;32mChange root password of mariadb"
-    sudo mysql -u root < $HOME_WINDOWS/Projects/dotfiles/install/extra/mariadb.sql
+    sudo mysql -u root < $HOME_WINDOWS/Projects/dotfiles/wsl/mariadb.sql
 else
     echo "\033[0;31mError: the configuration of mariadb doesnt exist"
 fi
@@ -82,7 +80,7 @@ echo ''
 
 # Javascript
 echo "\033[0;32mInstall nvm: { node, npm: [typescript, angular] }"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install node
 
 npm install -g typescript
@@ -96,6 +94,20 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 8.0.275.open-adpt
 sdk install groovy 3.0.6
 sdk install grails 3.3.8
+echo ''
+
+# zsh & oh-my-zsh
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+# Personal configurations
+echo "\033[0;32mSet up personal configurations"
+[ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.aliases ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.aliases ~/.aliases
+source ~/.aliases
+
+[ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.gitconfig ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.gitconfig ~/.gitconfig
+[ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.zshrc ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.zshrc ~/.zshrc
 echo ''
 
 forget_local_variables
