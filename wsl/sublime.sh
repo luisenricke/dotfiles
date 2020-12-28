@@ -36,7 +36,11 @@ if [ ! -d $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'  ]; then
     return
 fi
 
+print_ 'Set up personal configurations' 'green'
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/'Default (Windows)'.sublime-keymap $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/Guna.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/GitGutter.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/Preferences.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
+echo ''
+
+forget_local_variables
