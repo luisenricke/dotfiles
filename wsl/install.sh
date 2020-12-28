@@ -99,13 +99,30 @@ sdk install grails 3.3.8
 echo ''
 
 # Javascript
-print_ 'Install nvm: { node, npm: [typescript, angular] }\033[0m' 'green'
+print_ 'Install nvm: { node, npm: [typescript, angular] }' 'green'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 source ~/.bashrc
 
 nvm install node
 npm install -g typescript
 npm install -g @angular/cli
+echo ''
+
+# PHP 
+print_ 'Install php:7.2 && composer:1.8.0' 'green'
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+
+sudo apt install php7.2 -y
+php -v
+
+sudo apt install php7.2-common php7.2-mysql php7.2-curl php7.2-json php7.2-cgi php7.2-opcache php7.2-mbstring
+update-alternatives --set php /usr/bin/php7.2
+sudo a2enmod php7.2
+sudo systemctl start apache2
+
+
 echo ''
 
 forget_local_variables
