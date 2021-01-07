@@ -114,24 +114,34 @@ echo ''
 
 # PHP 
 print_ 'Install php:7.2 && composer:1.8.0' 'green'
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php
+sudo apt install software-properties-common apt-transport-https ca-certificates gnupg2 -y
+
+if [[ $(lsb_release -is) == "Debian" ]]; then
+    curl -fsSL https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+    sudo add-apt-repository "deb https://packages.sury.org/php/ $(lsb_release -cs) main"
+fi
+
+
+if [[ $(lsb_release -is) == "Ubuntu" ]]; then
+    sudo add-apt-repository ppa:ondrej/php
+fi
+
 sudo apt update
 
 sudo apt install php7.2 php-cli -y
 php -v
 
 sudo apt install php7.2-common php7.2-mysql php7.2-curl php7.2-json php7.2-cgi php7.2-opcache php7.2-mbstring
-update-alternatives --set php /usr/bin/php7.2
+sudo update-alternatives --set php /usr/bin/php7.2
 sudo a2enmod php7.2
-sudo systemctl start apache2
+sudo service apache2 restart
 
 cd ~
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 HASH=`curl -sS https://composer.github.io/installer.sig`
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-composer self-update 1.8.0
+sudo composer self-update 1.8.0
 
 echo ''
 
