@@ -28,7 +28,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Source Code Pro",
+	"font_face": "Jetbrains Mono Medium",
 	"font_options":
 	[
 		"dlig"
