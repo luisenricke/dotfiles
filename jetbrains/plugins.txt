@@ -1,0 +1,12 @@
+- Install
+    - Atom Material Icons
+    - Rainbow Brackets
+    - Presentations Assistant
+    - Key Promoter X
+
+- Disable
+    - Android
+    - JavaFX
+    - Mercurial
+    - Subversion
+    - IDE Features Trainer
