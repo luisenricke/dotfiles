@@ -1,7 +1,7 @@
 [
     // Side bar
 	{ "keys": ["ctrl+0"], "command": "focus_side_bar" },
-    { "keys": ["ctrl+|"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+q"], "command": "toggle_side_bar" },
     
     // Files
     { "keys": ["ctrl+f4"], "command": "close_file" },

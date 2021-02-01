@@ -33,7 +33,7 @@
 	[
 		"dlig"
 	],
-	"font_size": 11,
+	"font_size": 13,
 	"gn_hide_tab_dropdown": true,
 	"gn_overlay_scroll_bars": true,
 	"gn_sidebar_box": true,
@@ -75,5 +75,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"ui_scale": 0.85,
-	"word_wrap": false
+	"word_wrap": true
 }
