@@ -1,0 +1,44 @@
+[alias]
+    edit = config --global -e
+    list = !git config -l | grep alias | cut -c 7-
+    details = log -n1 -p --format=fuller
+    unstage = reset HEAD --
+
+    lg   = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold white)%s%C(reset) - %C(white) %an%C(reset)' --all
+    ll   = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold white)%s%C(reset) - %C(white) %an%C(reset)' --all --numstat
+
+    s = status -sb
+
+    a = add
+
+    c  = commit
+    cm = commit -m
+
+    d = diff
+
+    b = branch -av
+
+[color]
+    ui = true
+
+[color "status"]
+    header = "#9692af"
+    added = "#a0ffe6"
+    changed = "#f19292"
+    untracked = "#ffe3b0"
+    branch = "#8ed6ff" reverse
+    # Because the phrase "Detached HEAD" isn't unnerving enough
+    nobranch = bold ul blink "#f8b595"
+
+[color "diff"]
+    meta = "#707070"
+    func = "#e8d3ff"
+    frag = "#fef6fb"
+    context = "#9692af"
+    old = "#ffb6b9"
+    new = "#a0ffe6"
+
+[color "branch"]
+    current = "#a0ffe6" reverse
+    local = "#8ed6ff"
+    remote = "#c3bef0"
