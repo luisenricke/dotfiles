@@ -7,7 +7,7 @@ alias cd~='cd ~'
 alias ...='../..'
 alias ....='../../..'
 
-alias cd,='cd /mnt/c/Users/LuisVillalobos'
+alias cd,='cd /mnt/c/Users/{User}'
 
 # Files & Directories
 alias ls='ls --color=tty'
@@ -18,11 +18,16 @@ alias md='mkdir -pv'
 alias rd='rm -ri'
 alias rdf='rm -rv'
 
-# Programs 
+# Services
+alias _mysql='sudo service mysql start'
+alias _psql='sudo service postgresql start'
+
+# Programs
 alias g='git'
 alias mysql_='mysql -u root -p'
+alias psql_='psql -U postgres'
 
-# PHP env
+# PHP
 alias composer-ignore='composer --ignore-platform-reqs'
 alias phpa='php artisan'
 alias phpa-clear='php artisan config:clear && php artisan cache:clear && php artisan event:clear && php artisan route:clear && php artisan view:clear'
@@ -32,11 +37,9 @@ alias npm-watch='npm run watch-poll'
 
 alias ng-serve='ng serve --poll=2000'
 
-# JVM
-alias grails-run='grails -Dgrails.reload.enabled=true run-app'
-
 # Windows
 alias open='explorer.exe'
 
 alias sublime='/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe'
+
 # Other
