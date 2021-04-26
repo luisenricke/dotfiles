@@ -1,39 +1,28 @@
-
-
-;= ~~~~~~~~~~~~~~~~~~~~ Windows ~~~~~~~~~~~~~~~~~~~~
+;= Windows
 
 tasks-win=taskmgr
 service=services.msc
 
-;= TODO handle variable of editor
 alias=more "%USERPROFILE%\aliases.doskey"
 alias-edit=notepad.exe "%USERPROFILE%\aliases.doskey"
 
+;= Linux/Unix
 
-;= ~~~~~~~~~~~~~~~~~~~~ Linux/Unix ~~~~~~~~~~~~~~~~~~~~
-
-man=help $*
 pwd=cd
 cat=type $*
 history=doskey /history
+clear=cls
 
-tasks-=tasklist /FO TABLE /FI "STATUS eq RUNNING"
-kill=taskkill /T /IM $*
-
-
-;= ~~~~~~~~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~~~~~~~~
+;= Navigation
 
 e=explorer $*
 
 cd~=cd %USERPROFILE%
 ..=cd ..
 ...=cd .. && cd ..
-....=cd .. && cd ..&& cd ..
+....=cd .. && cd .. && cd ..
 
-clear=cls
-
-
-;= ~~~~~~~~~~~~~~~~~~~~ Files & Directories ~~~~~~~~~~~~~~~~~~~~
+;= Files & Directories
 
 ls=dir /B $*
 la=dir /A-i /B /O $*
@@ -45,46 +34,36 @@ cpd=xcopy /E /I /H /U $*
 rf=del /A-s $*
 rd=rmdir /S /Q $*
 
+;= Envioroment
 
-;= ~~~~~~~~~~~~~~~~~~~~ Envioroment ~~~~~~~~~~~~~~~~~~~~
+sublime="C:\Program Files\Sublime Text 3\subl.exe" $*
+vscode="code" $*
 
-g=git $*
-
-;= TODO set PATH of PHP
-;= TODO set PATH of composer
-composer-ignore=composer --ignore-platform-reqs $*
-phpa=php artisan $*
-phpa-clear=php artisan config:clear && php artisan cache:clear && php artisan event:clear && php artisan route:clear && php artisan view:clear
-
-;= TODO run npm
+;= database
 
 mysql_="C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql" -u root -p
 psql_="C:\Program Files\PostgreSQL\12\bin\psql" -U postgres -h localhost -p 5432
 sqlite="C:\Program Files\DB Browser for SQLite\DB Browser for SQLCipher.exe" $*
 heidisql="C:\laragon\bin\heidisql\heidisql.exe"
 
-sublime="C:\Program Files\Sublime Text 3\subl.exe" $*
-vscode="code" $*
+;= gradle
 
-jetbrains="%HOMEPATH%\AppData\Local\JetBrains\Toolbox\bin\jetbrains-toolbox.exe"
+android-build=gradlew assembleDebug $*
+android-install=gradlew installDebug $*
+android-uninstall=gradlew uninstallAll $*
+android-run=gradlew assembleDebug && gradlew installDebug $*
+android-rerun=gradlew uninstallAll && gradlew assembleDebug && gradlew installDebug $*
 
-processing="C:\processing-3.5.4\processing.exe" $*
+grails-run=gradlew bootRun $*
 
-postman="%HOMEPATH%\AppData\Local\Postman\Postman.exe"
+;= PHP & composer
 
-;= TODO set PATH of ADB
-gr-build=gradlew assembleDebug $*
-gr-install=gradlew installDebug $*
-gr-uninstall=gradlew uninstallAll $*
-gr-run=gradlew assembleDebug && gradlew installDebug $*
-gr-rerun=gradlew uninstallAll && gradlew assembleDebug && gradlew installDebug $*
+composer-ignore=composer --ignore-platform-reqs $*
+phpa=php artisan $*
+phpa-clear=php artisan config:clear && php artisan cache:clear && php artisan event:clear && php artisan route:clear && php artisan view:clear
 
-scrcpy=cd "C:\tools\scrcpy\" && C:\tools\scrcpy\scrcpy.exe" $*
+;= youtube-dl
 
-
-;= ~~~~~~~~~~~~~~~~~~~~ youtube-dl ~~~~~~~~~~~~~~~~~~~~
-
-;= TODO set PATH of ffmpeg
 yt="C:\tools\youtube-dl" $*
 yt-audio="C:\tools\youtube-dl" -i -c -w -x --audio-format mp3 -f "bestaudio" -o "%(title)s.%(ext)s" $*
 yt-audio-thumb="C:\tools\youtube-dl" -i -c -w -x --audio-format mp3 -f "bestaudio" -o "%(title)s.%(ext)s" $*
@@ -92,38 +71,3 @@ yt-video="C:\tools\youtube-dl" -i -c -w -f mp4 -o "%(title)s.%(ext)s" $*
 yt-video-best="C:\tools\youtube-dl" -i -c -w -f "bestvideo+bestaudio" -o "%(title)s.%(ext)s" $*
 yt-video-best-mp4="C:\tools\youtube-dl" -i -c -w -f "bestvideo+bestaudio" --recode-video mp4 -o "%(title)s.%(ext)s" $*
 yt-cache="C:\tools\youtube-dl" --rm-cache-dir
-;= mp4|flv|webm|mkv|avi to mp4 -> ffmpeg -i input.mkv output.mp4 -hide_banner
-
-
-;= ~~~~~~~~~~~~~~~~~~~~ Programs ~~~~~~~~~~~~~~~~~~~~
-
-email="C:\Program Files (x86)\Mozilla Thunderbird\thunderbird.exe"
-
-crypto="C:\Program Files\Cryptomator\Cryptomator.exe"
-
-bleachbit="C:\Program Files (x86)\BleachBit\bleachbit.exe"
-
-deluge="C:\Program Files (x86)\Deluge\deluge.exe"
-
-spotify=%HOMEPATH%\AppData\Roaming\Spotify\Spotify.exe
-vlc="C:\Program Files\VideoLAN\VLC\vlc.exe" $*
-
-pdf="C:\Program Files (x86)\Foxit Software\Foxit Reader\FoxitReader.exe" $*
-typora="C:\Program Files\Typora\Typora.exe" $*
-
-lol="C:\Riot Games\League of Legends\LeagueClient.exe"
-epic="C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win64\EpicGamesLauncher.exe"
-steam="C:\Program Files (x86)\Steam\steam.exe"
-
-firefox="C:\Program Files\Mozilla Firefox\firefox.exe"
-firefox_="C:\Program Files\Mozilla Firefox\firefox.exe" --private-window
-vivaldi="%HOMEPATH%\AppData\Local\Vivaldi\Application\vivaldi.exe"
-vivaldi_="%HOMEPATH%\AppData\Local\Vivaldi\Application\vivaldi.exe" --incognito
-opera="%HOMEPATH%\AppData\Local\Programs\Opera GX\launcher.exe"
-opera_="%HOMEPATH%\AppData\Local\Programs\Opera GX\launcher.exe" --private
-
-dropbox="C:\Program Files (x86)\Dropbox\Client\Dropbox.exe"
-mega="%HOMEPATH%\AppData\Local\MEGAsync\MEGAsync.exe"
-google="C:\Program Files\Google\Drive\googledrivesync.exe"
-sync-cloud="C:\Program Files (x86)\Dropbox\Client\Dropbox.exe" && "%HOMEPATH%\AppData\Local\MEGAsync\MEGAsync.exe" && "C:\Program Files\Google\Drive\googledrivesync.exe"
-
