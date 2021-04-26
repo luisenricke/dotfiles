@@ -7,10 +7,11 @@
     edit = config --global -e
     list = !git config -l | grep alias | cut -c 7-
     details = log -n1 -p --format=fuller
-    unstage = reset HEAD --
+    unstage = reset --
+    unsave = checkout --
 
-    lg   = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold white)%s%C(reset) - %C(white) %an%C(reset)' --all
-    ll   = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold white)%s%C(reset) - %C(white) %an%C(reset)' --all --numstat
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold white)%s%C(reset) - %C(white) %an%C(reset)' --all
+    ll = log --graph --abbrev-commit --decorate --format=format:'%C(bold yellow)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold white)%s%C(reset) - %C(white) %an%C(reset)' --all --numstat
 
     s = status -sb
 
@@ -21,7 +22,12 @@
 
     d = diff
 
-    b = branch -av
+    co = checkout
+
+    b = branch
+    bs = branch -av
+    bd = branch -d
+    b-clean = fetch --prune
 
 [color]
     ui = true
@@ -32,7 +38,7 @@
     changed = "#f19292"
     untracked = "#ffe3b0"
     branch = "#8ed6ff" reverse
-    # Because the phrase "Detached HEAD" isn't unnerving enough
+    # Because the phrase \"Detached HEAD\" isn\'t unnerving enough
     nobranch = bold ul blink "#f8b595"
 
 [color "diff"]
