@@ -1,29 +1,36 @@
 # Sublime Text 3
 
-## Location files
+## Location
 
 - Windows
-  - %WINDOWS_HOME%/AppData/Roaming/Sublime Text 3/Packages/User
-    - Default (Windows).sublime-keymap
-    - Preferences.sublime-settings
-    - Guna.sublime-settings
-    - GitGutter.sublime-settings
-    - Package Control.sublime-settings
+
+  ``` cmd
+  %WINDOWS_HOME%/AppData/Roaming/Sublime Text 3/Packages/User
+  ```
 
 - Unix/Linux
-  - ~/.config/sublime-text-3/Packages/User
-    - Default (Linux).sublime-keymap
-    - Preferences.sublime-settings
-    - Guna.sublime-settings
-    - GitGutter.sublime-settings
-    - Package Control.sublime-settings
 
-## Externsions
+  ``` shell
+  ~/.config/sublime-text-3/Packages/User
+  ```
 
-- Backup
+## Files
 
-All extensions availables are in ``Package Control.sublime-settings``, just need to save this file.
+- Default (Windows).sublime-keymap
+- Preferences.sublime-settings
+- GitGutter.sublime-settings
+- Guna.sublime-settings
+- Package Control.sublime-settings
+- phpfmt.sublime-settings
+- Preferences.sublime-settings
 
-- Install
+## Configuration
 
-Format the file ``Package Control.sublime-settings`` and only leave the names with comma separation and use ``Advanced Install Package`` tool.
+Run the below script to set up the environment.
+
+``` shell
+sh wsl.sh
+
+```
+
+NOTE: This script needs to run with WSL.

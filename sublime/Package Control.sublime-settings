@@ -1,0 +1,38 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Color Highlight",
+		"ColorPicker",
+		"DocBlockr",
+		"DotENV",
+		"Emmet",
+		"GitGutter",
+		"Grails",
+		"Guna",
+		"Icon Fonts",
+		"ImagePreview",
+		"Laravel 5 Snippets",
+		"Laravel Blade Highlighter",
+		"LoremIpsum",
+		"MarkdownPreview",
+		"Material Theme",
+		"Materialize",
+		"Package Control",
+		"PHP Companion",
+		"phpfmt",
+		"Sass",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"TypeScript",
+		"Vuejs Complete Package"
+	],
+}

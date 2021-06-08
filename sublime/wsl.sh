@@ -41,6 +41,9 @@ ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/'Default (Windows)'.sublime-keymap
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/Guna.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/GitGutter.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
 ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/Preferences.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
+ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/'Package Control'.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
+ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/'Package Control'.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
+ln -f $HOME_WINDOWS/Projects/dotfiles/sublime/phpfmt.sublime-settings $HOME_WINDOWS/AppData/Roaming/'Sublime Text 3'/Packages/User/
 echo ''
 
 forget_local_variables
