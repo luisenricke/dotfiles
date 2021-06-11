@@ -13,24 +13,26 @@
     "workbench.settings.editor": "json",
     "window.title": "${activeEditorShort} ${separator}  ${rootName}",
     "window.restoreWindows": "none",
+    "window.zoomLevel": 1,
     "explorer.sortOrder": "type",
-
-    // Editor
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.wordWrap": "off",
-    "editor.wordWrapColumn": 200,
-    "editor.renderWhitespace": "selection",
-    "editor.cursorWidth": 3,
     "explorer.openEditors.visible": 0,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.autoSave": "onWindowChange",
+    "remote.WSL.useShellEnvironment": false,
+    "git.ignoreMissingGitWarning": true,
 
-    // Minimap
+    // Editor
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 200,
+    "editor.renderWhitespace": "selection",
+    "editor.cursorWidth": 3,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 150,
     "editor.minimap.showSlider": "mouseover",
     "editor.formatOnPaste": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "emmet.triggerExpansionOnTab": true,
 
     // Telemetry & suggestions
     "workbench.settings.enableNaturalLanguageSearch": false,
@@ -38,18 +40,12 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
 
-    // Language
-    "spellright.language": ["es", "en"],
-    "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-    "spellright.statusBarIndicator": false,
-    "spellright.notificationClass": "hint",
-    "markdownlint.config": { "MD033": false },
-
     // Code
     "color-highlight.matchWords": true,
+    "color-highlight.markerType": "underline",
+    "color-highlight.markRuler": false,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "auto-close-tag.SublimeText3Mode": true,
-    "blade.format.enable": true,
 
     // Folder & Files
     "files.associations": {
@@ -58,9 +54,6 @@
         "*.blade.php": "blade",
         "*.php": "php"
     },
-
-    // wsl
-    "remote.WSL.useShellEnvironment": false,
 
     "files.exclude": {
         "**/.git/**": true,
@@ -196,12 +189,22 @@
         }
     ],
 
-    "git.ignoreMissingGitWarning": true,
+    // Web
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-    "emmet.triggerExpansionOnTab": true,
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-    "[blade]": {
-        "editor.autoClosingBrackets": "always"
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+
+    // PHP
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
     },
 
     "php.suggest.basic": false,
@@ -213,54 +216,21 @@
     "intelephense.format.braces": "psr12",
 
     "phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
-    /*"phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
-    "phpfmt.passes": [
-        "AlignPHPCode",
-        "AlignTypeHint",
-        "AddMissingParentheses",
-        "ConvertOpenTagWithEcho",
-        "DocBlockToComment",
-        "IndentTernaryConditions",
-        "JoinToImplode",
-        "PSR2KeywordsLowerCase",
-        "PSR2LnAfterNamespace",
-        "PSR2CurlyOpenNextLine",
-        "PSR2ModifierVisibilityStaticOrder",
-        "PSR2SingleEmptyLineAndStripClosingTag",
-        "ReindentSwitchBlocks",
-        "RemoveUseLeadingSlash",
-        "StripExtraCommaInArray",
-        "SpaceBetweenMethods",
-    ],
-    "phpfmt.exclude": [
-        "ReindentComments",
-        "StripNewlineWithinClassBody"
-    ],
-    "phpfmt.psr2": false,
-*/
-    "[php]": {
-        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
-        //"editor.formatOnSave": true
-    },
-    /*
-    "php-cs-fixer.executablePath": "C:/Users/LuisVillalobos/.vscode/extensions/junstyle.php-cs-fixer-0.1.158/php-cs-fixer.phar",
-    "php-cs-fixer.rules": "@PSR2",
-    "php-cs-fixer.formatHtml": true,
-    */
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "window.zoomLevel": 1,
+
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.lastDownload": 1622427435549,
-    "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+    "[blade]": {
+        "editor.autoClosingBrackets": "always"
     },
 
-    "color-highlight.markerType": "underline",
-    "color-highlight.markRuler": false,
+    "blade.format.enable": true,
+
+    // Language
+    "spellright.language": ["es", "en"],
+    "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+    "spellright.statusBarIndicator": false,
+    "spellright.notificationClass": "hint",
+    "markdownlint.config": { "MD033": false },
 
 }

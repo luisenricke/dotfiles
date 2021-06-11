@@ -76,4 +76,8 @@
 	"trim_automatic_white_space": true,
 	"ui_scale": 0.85,
 	"word_wrap": true,
+	/*"gnc_001": false,*/
+	/*"gnc_002": true,*/
+	/*"gni_001": true,*/
+	/*"gni_002": true,*/
 }
