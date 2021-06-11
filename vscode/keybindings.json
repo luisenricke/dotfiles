@@ -11,6 +11,7 @@
 
     // Editor
     { "key": "ctrl+alt+l", "command": "editor.action.reindentlines" },
+    { "key": "ctrl+alt+l", "command": "phpfmt.format", "when": "resourceExtname == .php" },
 
     { "key": "alt+j", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
     { "key": "ctrl+d", "command": "-editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
@@ -34,7 +35,5 @@
 
     { "key": "ctrl+alt+right", "command": "workbench.action.moveEditorToNextGroup" },
     { "key": "ctrl+alt+left", "command": "workbench.action.moveEditorToPreviousGroup" },
-
-
 
 ]
