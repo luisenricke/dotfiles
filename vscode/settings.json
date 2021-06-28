@@ -194,7 +194,15 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
     "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
@@ -218,7 +226,7 @@
     "phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
 
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1622427435549,
+    "php-cs-fixer.lastDownload": 1624659729945,
 
     "[blade]": {
         "editor.autoClosingBrackets": "always"
@@ -231,6 +239,11 @@
     "spellright.documentTypes": ["markdown", "latex", "plaintext"],
     "spellright.statusBarIndicator": false,
     "spellright.notificationClass": "hint",
-    "markdownlint.config": { "MD033": false },
+    "markdownlint.config": {
+        "MD033": false
+    },
 
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.NoBrowser": true,
 }
