@@ -38,6 +38,7 @@ echo ''
 print_ 'Install packages' 'green'
 sudo apt install zip unzip -y
 sudo apt install curl -y
+sudo apt install most tree -y
 echo ''
 
 # git
@@ -50,14 +51,14 @@ if [ ! -d ~/.ssh  ]; then
 
     ssh-keygen -t ed25519 -C $EMAIL
     eval "$(ssh-agent -s)"
-    
+
     ssh-add ~/.ssh/id_ed25519
-    
+
     clip.exe < ~/.ssh/id_ed25519.pub
-    
+
     echo "Your key is in your clipboard"
     echo "Press any key to continue configuration"
-    read 
+    read
 
     unset EMAIL
 fi
@@ -112,7 +113,7 @@ npm install -g typescript
 npm install -g @angular/cli
 echo ''
 
-# PHP 
+# PHP
 print_ 'Install php:7.2 && composer:1.8.0' 'green'
 sudo apt install software-properties-common apt-transport-https ca-certificates gnupg2 -y
 
