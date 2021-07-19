@@ -33,11 +33,7 @@ alias phpa-clear='php artisan config:clear && php artisan cache:clear && php art
 # Javascript
 alias npm-watch='npm run watch-poll'
 
-alias ng-serve='ng serve --poll=2000'
-
 # Windows
 alias open='explorer.exe'
-
-alias sublime='/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe'
 
 # Other
