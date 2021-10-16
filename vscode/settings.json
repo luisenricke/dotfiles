@@ -1,19 +1,20 @@
 {
     // Theme
-    "workbench.colorTheme": "Palenight Italic",
+    "workbench.colorTheme": "Halcyon",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.editor.highlightModifiedTabs": true,
 
     // Font
-    "editor.fontFamily": "Hasklig, Fira Code, Consolas",
+    "editor.fontFamily": "IBM Plex Mono Medium, Hasklig, Fira Code, Consolas",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
 
     // Configs
     "workbench.settings.editor": "json",
+    "workbench.tips.enabled": false,
     "window.title": "${activeEditorShort} ${separator}  ${rootName}",
     "window.restoreWindows": "none",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0.95,
     "explorer.sortOrder": "type",
     "explorer.openEditors.visible": 0,
     "files.insertFinalNewline": true,
@@ -31,20 +32,18 @@
     "editor.minimap.maxColumn": 150,
     "editor.minimap.showSlider": "mouseover",
     "editor.formatOnPaste": false,
+    "editor.bracketPairColorization.enabled": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "emmet.triggerExpansionOnTab": true,
 
     // Telemetry & suggestions
     "workbench.settings.enableNaturalLanguageSearch": false,
     "extensions.ignoreRecommendations": true,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
 
     // Code
     "color-highlight.matchWords": true,
     "color-highlight.markerType": "underline",
     "color-highlight.markRuler": false,
-    "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "auto-close-tag.SublimeText3Mode": true,
 
     // Folder & Files
@@ -207,7 +206,7 @@
     },
 
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
     // PHP
@@ -226,7 +225,7 @@
     "phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
 
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1624659729945,
+    "php-cs-fixer.lastDownload": 1633927691502,
 
     "[blade]": {
         "editor.autoClosingBrackets": "always"
@@ -236,13 +235,13 @@
 
     // Language
     "spellright.language": ["es", "en"],
-    "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-    "spellright.statusBarIndicator": false,
-    "spellright.notificationClass": "hint",
-    "markdownlint.config": {
-        "MD033": false
-    },
-
+    // "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+    //"spellright.statusBarIndicator": false,
+    //"spellright.notificationClass": "hint",
+    //"markdownlint.config": {
+    //    "MD033": false
+    //},
+    "cSpell.language": "es,en",
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.NoBrowser": true,
