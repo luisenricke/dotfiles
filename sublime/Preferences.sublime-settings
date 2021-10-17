@@ -39,7 +39,7 @@
 	"gn_sidebar_box": true,
 	"gn_title_bar": true,
 	"gnwidgo": true,
-	"gnwidgx": true,
+	/*"gnwidgx": true,*/
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
@@ -82,4 +82,9 @@
 	/*"gni_002": true,*/
 	/*"gnc_001": false,*/
 	/*"gnc_002": false,*/
+	/*"gnc_h01": true,*/
+	/*"gnc_m03": true,*/
+	/*"gnc_w6m11": true,*/
+	/*"gnwidg1": true,*/
+	"gnwidgx": true,
 }
