@@ -33,6 +33,7 @@
     "editor.minimap.showSlider": "mouseover",
     "editor.formatOnPaste": false,
     "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "emmet.triggerExpansionOnTab": true,
 
