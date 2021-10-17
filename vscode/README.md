@@ -1,25 +1,22 @@
 
-# Sublime Text 3
+# Visual Studio Code
 
 ## Location
 
 - Windows
 
   ``` cmd
-  %WINDOWS_HOME%/AppData/Roaming/Code/User
+  user/AppData/Roaming/Code/User
   ```
 
 ## Files
 
 - keybindings.json
 - settings.json
-- locale.json
 
-## Extensions
+## Backup
 
-The subsequent configuration is based on a response from [StackOverflow][1].
-
-- Backup
+- Extensions. The subsequent configuration is based on a response from [StackOverflow][1].
 
   ```shell
     # Unix
@@ -31,7 +28,9 @@ The subsequent configuration is based on a response from [StackOverflow][1].
     code --list-extensions | % { "code --install-extension $_" }
   ```
 
-## Configuration
+## Installation
+
+### WSL
 
 - Run the below script to set up the environment.
 
@@ -47,6 +46,16 @@ NOTE: This script needs to run with WSL.
 ``` shell
 extensions.list
 
+```
+
+### Windows
+
+- Settings
+
+```shell
+    # cmd
+    mklink /H "C:\Users\user\AppData\Roaming\Code\User\settings.json" "C:\path\to\project\dotfiles\vscode\settings.json"
+    mklink /H "C:\Users\user\AppData\Roaming\Code\User\keybindings.json" "C:\path\to\project\dotfiles\vscode\keybindings.json"
 ```
 
 <!-- Reference -->
