@@ -22,7 +22,7 @@ alias _psql='sudo service postgresql start'
 
 # Programs
 alias g='git'
-alias mysql_='mysql -u root -p'
+alias mariadb_='mariadb -u root -p'
 alias psql_='psql -U postgres'
 
 # PHP
