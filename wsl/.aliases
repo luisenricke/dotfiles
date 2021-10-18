@@ -17,12 +17,12 @@ alias rd='rm -ri'
 alias rdf='rm -rv'
 
 # Services
-alias _mysql='sudo service mysql start'
+alias _mariadb='sudo service mariadb start'
 alias _psql='sudo service postgresql start'
 
 # Programs
 alias g='git'
-alias mysql_='mysql -u root -p'
+alias mariadb_='mariadb -u root -p'
 alias psql_='psql -U postgres'
 
 # PHP
