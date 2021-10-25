@@ -1,0 +1,7 @@
+{
+  "Code in json formatting(Angular)": {
+    "prefix": "code-pre-ng",
+    "body": ["<code>", "\t<pre>{{ ${1:variable} | json }}</pre>", "</code>$0"],
+    "description": "Debug a variable in json with html tags and pipe(Angular)"
+  }
+}

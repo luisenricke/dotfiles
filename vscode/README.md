@@ -56,6 +56,7 @@ extensions.list
     # cmd
     mklink /H "C:\Users\user\AppData\Roaming\Code\User\settings.json" "C:\path\to\project\dotfiles\vscode\settings.json"
     mklink /H "C:\Users\user\AppData\Roaming\Code\User\keybindings.json" "C:\path\to\project\dotfiles\vscode\keybindings.json"
+    mklink /H /J "C:\Users\user\AppData\Roaming\Code\User\snippets\" "C:\path\to\project\dotfiles\vscode\snippets\"
 ```
 
 <!-- Reference -->
