@@ -3,28 +3,28 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "defaultProfile": "{ GUID }",
 
-  "initialCols": 100,
-  "initialRows": 20,
-
-  "copyOnSelect": false,
   "copyFormatting": "none",
-
+  "copyOnSelect": false,
+  "initialCols": 120,
+  "initialRows": 30,
   "largePasteWarning": false,
   "multiLinePasteWarning": false,
 
   // https://aka.ms/terminal-profile-settings
   "profiles": {
     "defaults": {
-      "colorScheme": "Tinacious Design (Dark)",
-      "fontSize": 12,
-      "fontFace": "Anonymous Pro",
-      "useAcrylic": true,
-      "acrylicOpacity": 0.75
+      "acrylicOpacity": 0.75,
+      "colorScheme": "One Half Dark",
+      "cursorShape": "filledBox",
+      "font": {
+        "face": "IBM Plex Mono",
+        "size": 11
+      },
+      "useAcrylic": true
     },
     "list": [
       {
         // Specific configurations
-        "cursorShape": "emptyBox",
         "cursorColor": "#ffffff",
         "selectionBackground": "#FFFFFF",
         "icon": "C://tools//ubuntu.ico"
