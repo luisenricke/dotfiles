@@ -14,6 +14,24 @@
 - Add path of binaries to environment variable.
 - Run the next command to test installation `php -v`.
 
+## PowerShell
+
+- Install Meslo font.
+- Install and configure `oh-my-posh`, `git-posh`.
+- Link theme to posh theme folder with the next command in cmd.
+
+```shell
+ mklink /H "C:\Users\user\.oh-my-posh\themes\luisenricke.omp.json" "C:\path\to\project\dotfiles\windows\luisenricke.omp.json"
+```
+
+- Save the next script in file call it from `$PROFILE` in PowerShell.
+
+```shell
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme luisenricke
+Import-Module posh-git
+```
+
 ## Composer
 
 - It is required to have some version of PHP configured.

@@ -24,10 +24,15 @@
     },
     "list": [
       {
-        // Specific configurations
-        "cursorColor": "#ffffff",
-        "selectionBackground": "#FFFFFF",
-        "icon": "C://tools//ubuntu.ico"
+        "name": "Debian",
+        "icon": "C://tools//debian.ico"
+      },
+      {
+        "name": "Windows PowerShell",
+        "font": {
+          "face": "MesloLGL Nerd Font",
+          "size": 10
+        }
       }
     ]
   },
