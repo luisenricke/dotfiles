@@ -34,11 +34,11 @@
 		"dlig"
 	],
 	"font_size": 13,
-	"gn_hide_tab_dropdown": true,
-	"gn_overlay_scroll_bars": true,
-	"gn_sidebar_box": true,
-	"gn_title_bar": true,
-	"gnwidgo": true,
+	/*"gn_hide_tab_dropdown": true,*/
+	/*"gn_overlay_scroll_bars": true,*/
+	/*"gn_sidebar_box": true,*/
+	/*"gn_title_bar": true,*/
+	/*"gnwidgo": true,*/
 	/*"gnwidgx": true,*/
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -86,5 +86,13 @@
 	/*"gnc_m03": true,*/
 	/*"gnc_w6m11": true,*/
 	/*"gnwidg1": true,*/
+	/*"gnwidgx": true,*/
+	/*"gni_001": true,*/
+	/*"gni_002": true,*/
+	"gn_hide_tab_dropdown": true,
+	"gn_overlay_scroll_bars": true,
+	"gn_sidebar_box": true,
+	"gn_title_bar": true,
+	"gnwidgo": true,
 	"gnwidgx": true,
 }

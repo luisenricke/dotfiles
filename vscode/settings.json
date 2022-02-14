@@ -246,4 +246,9 @@
     "liveServer.settings.donotVerifyTags": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.NoBrowser": true,
+    "cSpell.userWords": [
+        "dotfiles",
+        "Fira",
+        "Hasklig"
+    ]
 }
