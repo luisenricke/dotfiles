@@ -1,254 +1,261 @@
 {
-    // Theme
-    "workbench.colorTheme": "Halcyon",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.editor.highlightModifiedTabs": true,
+  // Theme
+  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.highlightModifiedTabs": true,
 
-    // Font
-    "editor.fontFamily": "IBM Plex Mono Medium, Hasklig, Fira Code, Consolas",
-    "editor.fontSize": 13,
-    "editor.fontLigatures": true,
+  // Font
+  "editor.fontFamily": "IBM Plex Mono Medium, Hasklig, Fira Code, Consolas",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
 
-    // Configs
-    "workbench.settings.editor": "json",
-    "workbench.tips.enabled": false,
-    "window.title": "${activeEditorShort} ${separator}  ${rootName}",
-    "window.restoreWindows": "none",
-    "window.zoomLevel": 0.95,
-    "explorer.sortOrder": "type",
-    "explorer.openEditors.visible": 0,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.autoSave": "onWindowChange",
-    "remote.WSL.useShellEnvironment": false,
-    "git.ignoreMissingGitWarning": true,
+  // Configs
+  "workbench.settings.editor": "json",
+  "workbench.tips.enabled": false,
+  "window.title": "${activeEditorShort} ${separator}  ${rootName}",
+  "window.restoreWindows": "none",
+  "window.zoomLevel": 0.95,
+  "explorer.sortOrder": "type",
+  "explorer.openEditors.visible": 0,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onWindowChange",
+  "remote.WSL.useShellEnvironment": false,
+  "git.ignoreMissingGitWarning": true,
 
-    // Editor
-    "editor.wordWrap": "off",
-    "editor.wordWrapColumn": 200,
-    "editor.renderWhitespace": "selection",
-    "editor.cursorWidth": 3,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.maxColumn": 150,
-    "editor.minimap.showSlider": "mouseover",
-    "editor.formatOnPaste": false,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "emmet.triggerExpansionOnTab": true,
+  // Editor
+  "editor.wordWrap": "off",
+  "editor.wordWrapColumn": 200,
+  "editor.renderWhitespace": "selection",
+  "editor.cursorWidth": 3,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 150,
+  "editor.minimap.showSlider": "mouseover",
+  "editor.formatOnPaste": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "emmet.triggerExpansionOnTab": true,
 
-    // Telemetry & suggestions
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "extensions.ignoreRecommendations": true,
+  // Telemetry & suggestions
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "extensions.ignoreRecommendations": true,
 
-    // Code
-    "color-highlight.matchWords": true,
-    "color-highlight.markerType": "underline",
-    "color-highlight.markRuler": false,
-    "auto-close-tag.SublimeText3Mode": true,
+  // Code
+  "color-highlight.matchWords": true,
+  "color-highlight.markerType": "underline",
+  "color-highlight.markRuler": false,
+  "auto-close-tag.SublimeText3Mode": true,
 
-    // Folder & Files
-    "files.associations": {
-        "*.aliases": "shellscript",
-        "*.doskey": "shellscript",
-        "*.blade.php": "blade",
-        "*.php": "php"
+  // Folder & Files
+  "files.associations": {
+    "*.aliases": "shellscript",
+    "*.doskey": "shellscript",
+    "*.blade.php": "blade",
+    "*.php": "php"
+  },
+
+  "files.exclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/bower_components": true,
+    "**/.cache/**": true,
+    "**/vendor/**": false,
+    "**/artisan": true,
+    "**/build/**": true,
+    "**/.gradle/**": true,
+    "**/.idea/**": true,
+    "**/.dll": true,
+    "**/.DS_Store": true
+  },
+
+  "files.watcherExclude": {
+    "**/.vscode/**": true,
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/bower_components": true,
+    "**/.cache/**": true,
+    "**/vendor/**": true,
+    "**/storage/**/*.php": true,
+    "**/artisan": true,
+    "**/composer.lock": true,
+    "**/build/**": true,
+    "**/libs/**": true,
+    "**/.gradle/**": true,
+    "**/.idea/**": true,
+    "**/.DS_Store": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/*.log": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true
+  },
+
+  "search.exclude": {
+    "**/.vscode/**": true,
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/bower_components": true,
+    "**/.cache/**": true,
+    "**/vendor/**": true,
+    "**/storage/**/*.php": true,
+    "**/artisan": true,
+    "**/composer.lock": true,
+    "**/build/**": true,
+    "**/libs/**": true,
+    "**/.gradle/**": true,
+    "**/.idea/**": true,
+    "**/.DS_Store": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/*.log": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true
+  },
+
+  "advancedNewFile.exclude": {
+    ".git": true,
+    "node_modules": true,
+    "bower_components": true,
+    ".cache": true,
+    "vendor": true,
+    "build": true,
+    "libs": true,
+    ".idea": true,
+    ".vscode": true,
+    "log": true,
+    "logs": true
+  },
+
+  "todohighlight.exclude": [
+    "**/.vscode/**",
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/bower_components",
+    "**/.cache/**",
+    "**/vendor/**",
+    "**/storage/**/*.php",
+    "**/artisan",
+    "**/composer.lock",
+    "**/build/**",
+    "**/libs/**",
+    "**/.gradle/**",
+    "**/.idea/**",
+    "**/.DS_Store",
+    "**/log/**",
+    "**/logs/**",
+    "**/*.log",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS"
+  ],
+
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.blase.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+
+  // Highlight keywords
+  "todohighlight.keywords": [
+    {
+      "text": "TODO",
+      "color": "#000",
+      "backgroundColor": "#FFCC5C",
+      "isWholeLine": false,
+      "overviewRulerColor": "#FFCC5C"
     },
-
-    "files.exclude": {
-        "**/.git/**": true,
-        "**/node_modules/**": true,
-        "**/bower_components": true,
-        "**/.cache/**": true,
-        "**/vendor/**": false,
-        "**/artisan": true,
-        "**/build/**": true,
-        "**/.gradle/**": true,
-        "**/.idea/**": true,
-        "**/.dll": true,
-        "**/.DS_Store": true
+    {
+      "text": "FIXME",
+      "color": "#000",
+      "backgroundColor": "#FF6F69",
+      "isWholeLine": false,
+      "overviewRulerColor": "#FF6F69"
     },
+    {
+      "text": "CHECK",
+      "color": "#000",
+      "backgroundColor": "#acdeaa",
+      "isWholeLine": false,
+      "overviewRulerColor": "#acdeaa"
+    }
+  ],
 
-    "files.watcherExclude": {
-        "**/.vscode/**": true,
-        "**/.git/**": true,
-        "**/node_modules/**": true,
-        "**/bower_components": true,
-        "**/.cache/**": true,
-        "**/vendor/**": true,
-        "**/storage/**/*.php": true,
-        "**/artisan": true,
-        "**/composer.lock": true,
-        "**/build/**": true,
-        "**/libs/**": true,
-        "**/.gradle/**": true,
-        "**/.idea/**": true,
-        "**/.DS_Store": true,
-        "**/log/**": true,
-        "**/logs/**": true,
-        "**/*.log": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-    },
+  // Web
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    "search.exclude": {
-        "**/.vscode/**": true,
-        "**/.git/**": true,
-        "**/node_modules/**": true,
-        "**/bower_components": true,
-        "**/.cache/**": true,
-        "**/vendor/**": true,
-        "**/storage/**/*.php": true,
-        "**/artisan": true,
-        "**/composer.lock": true,
-        "**/build/**": true,
-        "**/libs/**": true,
-        "**/.gradle/**": true,
-        "**/.idea/**": true,
-        "**/.DS_Store": true,
-        "**/log/**": true,
-        "**/logs/**": true,
-        "**/*.log": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true
-    },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    "advancedNewFile.exclude": {
-        ".git": true,
-        "node_modules": true,
-        "bower_components": true,
-        ".cache": true,
-        "vendor": true,
-        "build": true,
-        "libs": true,
-        ".idea": true,
-        ".vscode": true,
-        "log": true,
-        "logs": true
-    },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    "todohighlight.exclude": [
-        "**/.vscode/**",
-        "**/.git/**",
-        "**/node_modules/**",
-        "**/bower_components",
-        "**/.cache/**",
-        "**/vendor/**",
-        "**/storage/**/*.php",
-        "**/artisan",
-        "**/composer.lock",
-        "**/build/**",
-        "**/libs/**",
-        "**/.gradle/**",
-        "**/.idea/**",
-        "**/.DS_Store",
-        "**/log/**",
-        "**/logs/**",
-        "**/*.log",
-        "**/.svn",
-        "**/.hg",
-        "**/CVS"
-    ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    "todohighlight.include": [
-        "**/*.js",
-        "**/*.jsx",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.html",
-        "**/*.php",
-        "**/*.blase.php",
-        "**/*.css",
-        "**/*.scss"
-    ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    // Highlight keywords
-    "todohighlight.keywords": [
-        {
-            "text": "TODO",
-            "color": "#000",
-            "backgroundColor": "#FFCC5C",
-            "isWholeLine": false,
-            "overviewRulerColor": "#FFCC5C"
-        },
-        {
-            "text": "FIXME",
-            "color": "#000",
-            "backgroundColor": "#FF6F69",
-            "isWholeLine": false,
-            "overviewRulerColor": "#FF6F69"
-        },
-        {
-            "text": "CHECK",
-            "color": "#000",
-            "backgroundColor": "#acdeaa",
-            "isWholeLine": false,
-            "overviewRulerColor": "#acdeaa"
-        }
-    ],
+  // PHP
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+  },
 
-    // Web
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  "php.suggest.basic": false,
+  "php.validate.enable": true,
+  "php.validate.executablePath": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
 
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  "intelephense.environment.phpVersion": "7.2.34",
+  "intelephense.format.enable": false,
+  "intelephense.format.braces": "psr12",
 
-    "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  "phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
 
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1654490580343,
 
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  "[blade]": {
+    "editor.autoClosingBrackets": "always"
+  },
 
-    // PHP
-    "[php]": {
-        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
-    },
+  "blade.format.enable": true,
 
-    "php.suggest.basic": false,
-    "php.validate.enable": true,
-    "php.validate.executablePath": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
+  // Language
+  "spellright.language": ["es", "en"],
+  // "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  //"spellright.statusBarIndicator": false,
+  //"spellright.notificationClass": "hint",
+  //"markdownlint.config": {
+  //    "MD033": false
+  //},
+  "cSpell.language": "es,en",
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.NoBrowser": true,
+  "cSpell.userWords": ["dotfiles", "Fira", "Hasklig"],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    "intelephense.environment.phpVersion": "7.2.34",
-    "intelephense.format.enable": false,
-    "intelephense.format.braces": "psr12",
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 
-    "phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
-
-    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.lastDownload": 1633927691502,
-
-    "[blade]": {
-        "editor.autoClosingBrackets": "always"
-    },
-
-    "blade.format.enable": true,
-
-    // Language
-    "spellright.language": ["es", "en"],
-    // "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-    //"spellright.statusBarIndicator": false,
-    //"spellright.notificationClass": "hint",
-    //"markdownlint.config": {
-    //    "MD033": false
-    //},
-    "cSpell.language": "es,en",
-    "liveServer.settings.donotVerifyTags": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.NoBrowser": true,
-    "cSpell.userWords": [
-        "dotfiles",
-        "Fira",
-        "Hasklig"
-    ]
 }
