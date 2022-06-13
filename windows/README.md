@@ -16,21 +16,69 @@
 
 ## PowerShell
 
-- Install Meslo font.
-- Install and configure `oh-my-posh`, `git-posh`.
-- Link theme to posh theme folder with the next command in cmd.
+- Install `Windows Terminal`
+- Install the latest Powershell. The latest version I am using is 7.2.4.
+- Install any font of [NerdFonts](https://www.nerdfonts.com/). Preferably it can be `Meslo` or `Caskaydia Cove`.
+- Update the configuration of `Windows Terminal` with the new shell.
+- Install and configure [Oh my posh](https://ohmyposh.dev/docs/installation/windows).
+- Link custom theme to posh theme folder with the next command. Note: Update the specific values for the env.
 
-```shell
- mklink /H "C:\Users\user\.oh-my-posh\themes\luisenricke.omp.json" "C:\path\to\project\dotfiles\windows\luisenricke.omp.json"
+```powershell
+cmd /c mklink /H "C:\Users\user\AppData\Local\Programs\oh-my-posh\themes\custom-theme.omp.json" "C:\path\to\dotfiles\windows\themes\custom-colorful.omp.json"
 ```
 
-- Save the next script in file call it from `$PROFILE` in PowerShell.
+- Create or update `Microsoft.PowerShell_profile.ps1` with the command.
 
-```shell
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme luisenricke
+```powershell
+notepad $PROFILE
+```
+
+- Install the packages to want to use
+
+```powershell
+Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module PSReadLine -AllowPrerelease -Force
+Install-Module z -AllowClobber
+PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
+```
+
+- Link or update the file of `Microsoft.PowerShell_profile.ps1` with the next configuration.
+
+```powershell
+# Link command
+cmd /c mklink /H "C:\Users\LuisVillalobos\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" "C:\Users\LuisVillalobos\Projects\dotfiles\windows\Microsoft.PowerShell_profile.ps1"
+
+# Content of the file - Check to update configuration in the repository
+oh-my-posh init pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/custom-colorful.omp.json | Invoke-Expression
+
+Import-Module -Name Terminal-Icons
+
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+
+Import-Module z
+
 Import-Module posh-git
 ```
+
+- If you want it to predict the folders you have to use the z command and enter the folder and reuse it in other files location
+
+```powershell
+z 'C:\Users\user\nested\folder'
+```
+
+---
+
+### References
+
+- [Youtube - How to make the ultimate Terminal Prompt on Windows 11 - This video is LONG and WORDY and DETAILED](https://youtu.be/VT2L1SXFq9U)
+- [Blog - My Ultimate PowerShell prompt with Oh My Posh and the Windows Terminal](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal)
+- [Blog - Adding Predictive IntelliSense to my Windows Terminal PowerShell Prompt with PSReadline](https://www.hanselman.com/blog/adding-predictive-intellisense-to-my-windows-terminal-powershell-prompt-with-psreadline)
+- [Blog - Spend less time CD'ing around directories with the PowerShell Z shortcut](https://www.hanselman.com/blog/spend-less-time-cding-around-directories-with-the-powershell-z-shortcut)
+- [Doc - Oh my posh](https://ohmyposh.dev/docs)
+- [Doc - Posh-Git](https://github.com/dahlbyk/posh-git)
 
 ## Composer
 

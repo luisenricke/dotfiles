@@ -13,14 +13,14 @@
   // https://aka.ms/terminal-profile-settings
   "profiles": {
     "defaults": {
-      "acrylicOpacity": 0.75,
+      "opacity": 75,
+      "useAcrylic": true,
       "colorScheme": "One Half Dark",
       "cursorShape": "filledBox",
       "font": {
-        "face": "IBM Plex Mono",
+        "face": "MesloLGL Nerd Font",
         "size": 11
-      },
-      "useAcrylic": true
+      }
     },
     "list": [
       {
