@@ -1,58 +1,50 @@
 {
+  // #region vscode configuration
   // Theme
   "workbench.colorTheme": "Ayu Mirage Bordered",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.highlightModifiedTabs": true,
+  "window.title": "${activeEditorShort} ${separator}  ${rootName}",
+  "window.zoomLevel": 0.95,
 
   // Font
   "editor.fontFamily": "IBM Plex Mono Medium, Hasklig, Fira Code, Consolas",
   "editor.fontSize": 13,
   "editor.fontLigatures": true,
 
-  // Configs
-  "workbench.settings.editor": "json",
-  "workbench.tips.enabled": false,
-  "window.title": "${activeEditorShort} ${separator}  ${rootName}",
-  "window.restoreWindows": "none",
-  "window.zoomLevel": 0.95,
-  "explorer.sortOrder": "type",
-  "explorer.openEditors.visible": 0,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "files.autoSave": "onWindowChange",
-  "remote.WSL.useShellEnvironment": false,
-  "git.ignoreMissingGitWarning": true,
-
   // Editor
   "editor.wordWrap": "off",
   "editor.wordWrapColumn": 200,
   "editor.renderWhitespace": "selection",
   "editor.cursorWidth": 3,
+
   "editor.minimap.renderCharacters": false,
-  "editor.minimap.maxColumn": 150,
   "editor.minimap.showSlider": "mouseover",
-  "editor.formatOnPaste": false,
+  "editor.minimap.maxColumn": 150,
+
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
+
+  "explorer.sortOrder": "type",
+
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onWindowChange",
+
+  // Others
+  "workbench.editor.highlightModifiedTabs": true,
   "emmet.triggerExpansionOnTab": true,
+  "editor.formatOnPaste": false,
+  "workbench.settings.editor": "json",
+  // #endregion
 
-  // Telemetry & suggestions
-  "workbench.settings.enableNaturalLanguageSearch": false,
-  "extensions.ignoreRecommendations": true,
-
-  // Code
-  "color-highlight.matchWords": true,
-  "color-highlight.markerType": "underline",
-  "color-highlight.markRuler": false,
-  "auto-close-tag.SublimeText3Mode": true,
-
-  // Folder & Files
+  // #region Folder & Files
   "files.associations": {
     "*.aliases": "shellscript",
     "*.doskey": "shellscript",
     "*.blade.php": "blade",
-    "*.php": "php"
+    "*.php": "php",
+    "*.erb": "erb",
+    "*.html.erb": "erb"
   },
 
   "files.exclude": {
@@ -114,6 +106,112 @@
     "**/.hg": true,
     "**/CVS": true
   },
+  // #endregion
+
+  // #region Language
+  "cSpell.language": "es,en",
+  // #endregion
+
+  // #region JSON
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // #endregion
+
+  // #region Web
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // #endregion
+
+  // #region PHP
+  "[php]": {
+    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+  },
+
+  "php.suggest.basic": false,
+  "php.validate.enable": true,
+  "php.validate.executablePath": "C:/tools/php/php-8.0.20-Win32-vs16-x64/php.exe",
+
+  "intelephense.environment.phpVersion": "7.2.34",
+  "intelephense.format.enable": false,
+  "intelephense.format.braces": "psr12",
+
+  "phpfmt.php_bin": "C:/tools/php/php-8.0.20-Win32-vs16-x64/php.exe",
+  "php.debug.executablePath": "C:/tools/php/php-8.0.20-Win32-vs16-x64/php.exe",
+
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1656047836722,
+
+  "[blade]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+
+  "blade.format.enable": false,
+  "bladeFormatter.format.enabled": true,
+  // #endregion
+
+  // #region Ruby
+  "ruby.useBundler": true, //run non-lint commands with bundle exec
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // enable rubocop via bundler
+    },
+    "reek": {
+      "useBundler": true // enable reek via bundler
+    }
+  },
+  "ruby.format": "rubocop", // use rubocop for formatting
+
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+  },
+  // #endregion
+
+  // #region Noisy configuration
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "extensions.ignoreRecommendations": true,
+  "workbench.tips.enabled": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "git.ignoreMissingGitWarning": true,
+  "explorer.openEditors.visible": 0,
+  "window.restoreWindows": "none",
+  // #endregion
+
+  // #region Other plugins
+  "auto-close-tag.SublimeText3Mode": true,
+
+  "color-highlight.markerType": "underline",
+
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.NoBrowser": true,
 
   "advancedNewFile.exclude": {
     ".git": true,
@@ -164,7 +262,6 @@
     "**/*.scss"
   ],
 
-  // Highlight keywords
   "todohighlight.keywords": [
     {
       "text": "TODO",
@@ -187,75 +284,6 @@
       "isWholeLine": false,
       "overviewRulerColor": "#acdeaa"
     }
-  ],
-
-  // Web
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  // PHP
-  "[php]": {
-    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
-  },
-
-  "php.suggest.basic": false,
-  "php.validate.enable": true,
-  "php.validate.executablePath": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
-
-  "intelephense.environment.phpVersion": "7.2.34",
-  "intelephense.format.enable": false,
-  "intelephense.format.braces": "psr12",
-
-  "phpfmt.php_bin": "C:/tools/php/php-7.2.34-Win32-VC15-x64/php.exe",
-
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1654490580343,
-
-  "[blade]": {
-    "editor.autoClosingBrackets": "always"
-  },
-
-  "blade.format.enable": true,
-
-  // Language
-  "spellright.language": ["es", "en"],
-  // "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-  //"spellright.statusBarIndicator": false,
-  //"spellright.notificationClass": "hint",
-  //"markdownlint.config": {
-  //    "MD033": false
-  //},
-  "cSpell.language": "es,en",
-  "liveServer.settings.donotVerifyTags": true,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.NoBrowser": true,
-  "cSpell.userWords": ["dotfiles", "Fira", "Hasklig"],
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-
+  ]
+  // #endregion
 }
