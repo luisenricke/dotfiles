@@ -6,14 +6,18 @@
         "endregion",
         "esbenp",
         "Fira",
+        "gemfile",
         "Hasklig",
         "intelephense",
         "kokororin",
+        "laravel",
+        "markdownlint",
         "phar",
         "phpfmt",
         "rubocop",
         "shufo",
         "spellright",
+        "tailwindcss",
         "todohighlight"
     ]
 }

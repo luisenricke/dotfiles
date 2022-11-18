@@ -30,6 +30,8 @@
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onWindowChange",
 
+  "diffEditor.ignoreTrimWhitespace": false,
+
   // Others
   "workbench.editor.highlightModifiedTabs": true,
   "emmet.triggerExpansionOnTab": true,
