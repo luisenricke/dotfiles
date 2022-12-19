@@ -3,39 +3,55 @@
 ## Font
 
 - Fira Code
+- JetBrains Mono
 
-## Themes
+### Config
 
-- Lotus Theme
-- Nightfall Theme
+- Size: 12
+- Line height: 1.3
+- Enable ligatures: true
 
 ## Log Console
 
-- Debug #ECECEC
-- Error #E5707E
-- Expired entry #888888
-- Info #A7C5EB
-- Verbose #C3AED6
-- Warning #FBC687
+- Debug ``#ECECEC``
+- Error ``#E5707E``
+- Expired entry ``#888888``
+- Info ``#A7C5EB``
+- Verbose ``#C3AED6``
+- Warning ``#FBC687``
 
-### Plugins
+## Plugins
 
-#### Basics
+### Required
 
 - Atom Material Icons
-- Rainbow Brackets
 - Presentations Assistant
+- String Manipulation
+- Indent Rainbow
+- .ignore
+- Return Highlighter
 
-#### Alternatives
+### Themes
+
+- Lotus Theme
+- Nightfall Theme
+- One Dark Theme
+- ***Catppuccin(Frappe)***
+
+### Alternatives
 
 - Key Promoter X
 
-#### Disable defaults
+### Disable defaults
 
 - Android
-- Settings repository
+- Android Design Tools
+- Settings Sync
+- Eclipse Keymap
+- NetBeans Keymap
 - Windows 10 Light Theme
 - Mercurial
 - Subversion
 - IDE Features Trainer
 - IDE Features Trainer: Git Lessons
+- Qodana

@@ -1,0 +1,8 @@
+<application>
+  <component name="PresentationAssistant">
+    <option name="alternativeKeymap" />
+    <option name="fontSize" value="20" />
+    <option name="horizontalAlignment" value="RIGHT" />
+    <option name="margin" value="24" />
+  </component>
+</application>
