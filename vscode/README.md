@@ -36,23 +36,31 @@
 
 ``` shell
 sh wsl.sh
-
 ```
 
-NOTE: This script needs to run with WSL.
+> NOTE: This script needs to run with WSL.
 
-- Run the below file to set up the extensions.
+- Run the below file to set up the extensions. [StackOverflow][2].
 
 ``` shell
 extensions.list
-
 ```
+
+### PowerShell
+
+- Run the next command with powershell.
+
+``` powershell
+code --list-extensions | % { "code --install-extension $_" }
+```
+
+> Note: The file only contains the name of the extensions.
 
 ### Windows
 
 - Settings
 
-```shell
+```powershell
     # cmd
     mklink /H "C:\Users\user\AppData\Roaming\Code\User\settings.json" "C:\path\to\project\dotfiles\vscode\settings.json"
     mklink /H "C:\Users\user\AppData\Roaming\Code\User\keybindings.json" "C:\path\to\project\dotfiles\vscode\keybindings.json"
@@ -62,3 +70,4 @@ extensions.list
 <!-- Reference -->
 
 [1]: https://stackoverflow.com/a/49398449/12923478
+[2]: https://stackoverflow.com/a/49398449/12923478
