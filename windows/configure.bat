@@ -20,7 +20,7 @@ if not exist C:\tools (
     mkdir C:\tools
     echo Folder created in C:\tools
     echo.
-) 
+)
 
 if exist C:\tools (
     if not exist C:\tools\ubuntu.ico (
@@ -55,7 +55,7 @@ if exist C:\tools (
 
         echo Setting up paths
         rem set PATH=%PATH%;C:\tools
-        echo. 
+        echo.
 
         curl https://yt-dl.org/downloads/%youtubedlLatest%/youtube-dl.exe -L -o C:\tools\youtube-dl.exe
         echo Downloaded youtube-dl, version: %youtubedlLatest%

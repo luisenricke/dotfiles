@@ -30,20 +30,15 @@ if [ ! -d $HOME_WINDOWS  ]; then
     return
 fi
 
-# oh-my-zsh plugins
-print_ 'Install oh-my-zsh plugins' 'green'
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-echo ''
+if [ ! -d $HOME_WINDOWS/AppData/Roaming/Code/User  ]; then
+    forget_local_variables
+    print_ 'Error: Code isnt installed' 'red'
+    return
+fi
 
-# Personal configurations
 print_ 'Set up personal configurations' 'green'
-[ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.aliases ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.aliases ~/.aliases
-source ~/.aliases
-
-[ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.gitconfig ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.gitconfig ~/.gitconfig
-[ -f $HOME_WINDOWS/Projects/dotfiles/wsl/.zshrc ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/wsl/.zshrc ~/.zshrc
+ln -f $HOME_WINDOWS/Projects/dotfiles/vscode/keybindings.json $HOME_WINDOWS/AppData/Roaming/Code/User
+ln -f $HOME_WINDOWS/Projects/dotfiles/vscode/settings.json $HOME_WINDOWS/AppData/Roaming/Code/User
 echo ''
 
 forget_local_variables
-
-zsh
