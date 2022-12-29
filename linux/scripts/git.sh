@@ -6,18 +6,18 @@ if [ ! -d ~/.ssh  ]; then
 
     ssh-keygen -t ed25519 -C $EMAIL
     eval "$(ssh-agent -s)"
-    
+
     ssh-add ~/.ssh/id_ed25519
-    
+
     xclip -selection clipboard < ~/.ssh/id_ed25519.pub
-    
+
     echo ""
     echo "Your key is in your clipboard."
     echo "Add your key in GitHub https://github.com/settings/ssh/new"
     echo "Or in other pages"
     echo "When you are ready to continue, press [ENTER] key"
     echo ""
-    read 
+    read
 
     unset EMAIL
 fi
@@ -43,8 +43,8 @@ if [ ! -f ~/.gitconfig ]; then
     fi
 fi
 
-# reference 
-# 
+# reference
+#
 # - SSH Key
 #   * https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
 #   * https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account"

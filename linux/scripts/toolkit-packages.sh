@@ -1,4 +1,4 @@
-# IMPORTANT 
+# IMPORTANT
 #   * enable 'Non-DFSG-compatible Software (non-free)'
 
 sudo apt install synaptic -y

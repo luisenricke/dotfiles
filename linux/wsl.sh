@@ -151,3 +151,21 @@ forget_local_variables
 # zsh & oh-my-zsh
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# oh-my-zsh plugins
+print_ 'Install oh-my-zsh plugins' 'green'
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+echo ''
+
+# Personal configurations
+print_ 'Set up personal configurations' 'green'
+[ -f $HOME_WINDOWS/Projects/dotfiles/linux/.aliases ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/linux/.aliases ~/.aliases
+source ~/.aliases
+
+[ -f $HOME_WINDOWS/Projects/dotfiles/linux/.zshrc ] && ln -sf $HOME_WINDOWS/Projects/dotfiles/linux/.zshrc ~/.zshrc
+echo ''
+
+forget_local_variables
+
+zsh

@@ -3,7 +3,7 @@ download_font_from_1001fonts() {
     local url=$1
     local output_file=$2
     local output_directory=$3
-    
+
     if [ ! -d /usr/local/share/fonts/$output_directory ]; then
         echo -e "\n Installing '$output_directory' font \n"
         curl $url -L -o $output_file
@@ -19,7 +19,7 @@ sudo apt install unzip -y
 # Fira Code
 if [ ! -d /usr/local/share/fonts/FiraCode ]; then
     echo -e "\n Installing 'FiraCode' font \n"
-    
+
     FIRA_CODE_VERSION="5.2"
     FIRA_CODE_FILE="Fira_Code_v$FIRA_CODE_VERSION.zip"
 
@@ -44,7 +44,7 @@ download_font_from_1001fonts "https://dl.1001fonts.com/source-code-pro.zip" "sou
 
 
 # reference
-# 
+#
 # * https://vitux.com/how-to-install-custom-fonts-in-debian/
 # * https://bash.cyberciti.biz/guide/Pass_arguments_into_a_function
 #

@@ -1,7 +1,6 @@
-# IMPORTANT 
+# IMPORTANT
 #   1. run with user to config
 #   2. enable 'Non-DFSG-compatible Software (non-free)'
-
 
 DOTFILES=~/Projects/dotfiles
 
@@ -21,10 +20,10 @@ sudo apt upgrade -y
 
 # utility & software
 if [ -d ~/Projects/dotfiles ]; then
-    source $DOTFILES/install/toolkit-packages.sh
-    source $DOTFILES/install/font.sh
-    source $DOTFILES/install/mariadb.sh
-    source $DOTFILES/install/sublime-text.sh
+    source $DOTFILES/linux/scripts/toolkit-packages.sh
+    source $DOTFILES/linux/scripts/font.sh
+    source $DOTFILES/linux/scripts/mariadb.sh
+    source $DOTFILES/linux/scripts/sublime-text.sh
 fi
 
 # personal configurations
@@ -32,13 +31,13 @@ if [ ! -f ~/.aliases  ]; then
     echo -e "\n Apply aliases \n"
 
     if [ -d ~/Projects/dotfiles ]; then
-        cp $DOTFILES/.aliases ~
+        cp $DOTFILES/linux/.aliases ~
     else
-        curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/.aliases -o .aliases
+        curl https://raw.githubusercontent.com/luisenricke/dotfiles/main/linux/.aliases -o .aliases
     fi
-    
+
     source .aliases
-    
+
     if [ -f ~/.bashrc ]; then
         sudo echo -e "\nif [ -f ~/.aliases ]; then\n\t. ~/.aliases;\nfi\n" >> ~/.bashrc
     fi
