@@ -19,14 +19,6 @@
 - Install `Windows Terminal`
 - Install the latest Powershell. The latest version I am using is 7.2.4.
 - Install any font of [NerdFonts](https://www.nerdfonts.com/). Preferably it can be `Meslo` or `Caskaydia Cove`.
-- Update the configuration of `Windows Terminal` with the new shell.
-- Install and configure [Oh my posh](https://ohmyposh.dev/docs/installation/windows).
-- Link custom theme to posh theme folder with the next command. Note: Update the specific values for the env.
-
-```powershell
-cmd /c mklink /H "C:\Users\user\AppData\Local\Programs\oh-my-posh\themes\custom-theme.omp.json" "C:\path\to\dotfiles\windows\themes\custom-colorful.omp.json"
-```
-
 - Create or update `Microsoft.PowerShell_profile.ps1` with the command.
 
 ```powershell
@@ -39,7 +31,6 @@ notepad $PROFILE
 Install-Module -Name Terminal-Icons -Repository PSGallery
 Install-Module PSReadLine -AllowPrerelease -Force
 Install-Module z -AllowClobber
-PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
 ```
 
 - Link or update the file of `Microsoft.PowerShell_profile.ps1` with the next configuration.
@@ -49,8 +40,6 @@ PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force
 cmd /c mklink /H "C:\Users\LuisVillalobos\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" "C:\Users\LuisVillalobos\Projects\dotfiles\windows\Microsoft.PowerShell_profile.ps1"
 
 # Content of the file - Check to update configuration in the repository
-oh-my-posh init pwsh --config ~/AppData/Local/Programs/oh-my-posh/themes/custom-colorful.omp.json | Invoke-Expression
-
 Import-Module -Name Terminal-Icons
 
 Import-Module PSReadLine
