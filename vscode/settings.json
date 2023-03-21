@@ -1,14 +1,14 @@
 {
   // #region vscode configuration
   // Theme
-  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.colorTheme": "Bearded Theme Vivid Black",
   "workbench.iconTheme": "material-icon-theme",
   "window.title": "${activeEditorShort} ${separator}  ${rootName}",
   "window.zoomLevel": 0.95,
 
   // Font
-  "editor.fontFamily": "IBM Plex Mono Medium, Hasklig, Fira Code, Consolas",
-  "editor.fontSize": 13,
+  "editor.fontFamily": "IBM Plex Mono Bold, Hasklig, Fira Code, Consolas",
+  "editor.fontSize": 12,
   "editor.fontLigatures": true,
 
   // Editor

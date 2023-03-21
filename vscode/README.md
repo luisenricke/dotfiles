@@ -25,7 +25,7 @@
 
   ```shell
     # PowerShell
-    code --list-extensions | % { "code --install-extension $_" }
+    code --list-extensions | % { "$_" }
   ```
 
 ## Installation
@@ -48,10 +48,10 @@ extensions.list
 
 ### PowerShell
 
-- Run the next command with powershell.
+- Run the next command with powershell. It needs to be in the folder of the file.
 
 ``` powershell
-code --list-extensions | % { "code --install-extension $_" }
+cat extensions.list |% { code --install-extension $_}
 ```
 
 > Note: The file only contains the name of the extensions.

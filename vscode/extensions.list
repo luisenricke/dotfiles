@@ -1,66 +1,66 @@
-code --install-extension aki77.rails-db-schema
-code --install-extension aliariff.vscode-erb-beautify
-code --install-extension amiralizadeh9480.laravel-extra-intellisense
-code --install-extension Angular.ng-template
-code --install-extension austenc.laravel-blade-spacer
-code --install-extension bierner.color-info
-code --install-extension bierner.emojisense
-code --install-extension bmewburn.vscode-intelephense-client
-code --install-extension bradlc.vscode-tailwindcss
-code --install-extension brittanychiang.halcyon-vscode
-code --install-extension bung87.rails
-code --install-extension bung87.vscode-gemfile
-code --install-extension castwide.solargraph
-code --install-extension christian-kohler.path-intellisense
-code --install-extension codezombiech.gitignore
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension ecmel.vscode-html-css
-code --install-extension EditorConfig.EditorConfig
-code --install-extension esbenp.prettier-vscode
-code --install-extension formulahendry.auto-close-tag
-code --install-extension formulahendry.auto-rename-tag
-code --install-extension formulahendry.code-runner
-code --install-extension IBM.output-colorizer
-code --install-extension iliazeus.vscode-ansi
-code --install-extension junstyle.php-cs-fixer
-code --install-extension kaiwood.endwise
-code --install-extension kisstkondoros.vscode-gutter-preview
-code --install-extension kokororin.vscode-phpfmt
-code --install-extension manuelpuyol.erb-linter
-code --install-extension marlon407.code-groovy
-code --install-extension mattpocock.ts-error-translator
-code --install-extension Mikael.Angular-BeastCode
-code --install-extension mikestead.dotenv
-code --install-extension misogi.ruby-rubocop
-code --install-extension ms-vscode-remote.remote-wsl
-code --install-extension naumovs.color-highlight
-code --install-extension nhoizey.gremlins
-code --install-extension oderwat.indent-rainbow
-code --install-extension onecentlin.laravel-blade
-code --install-extension onecentlin.laravel5-snippets
-code --install-extension patbenatar.advanced-new-file
-code --install-extension PKief.material-icon-theme
-code --install-extension pmneo.tsimporter
-code --install-extension pranaygp.vscode-css-peek
-code --install-extension rbbit.typescript-hero
-code --install-extension rebornix.ruby
-code --install-extension ritwickdey.LiveServer
-code --install-extension shardulm94.trailing-spaces
-code --install-extension shufo.vscode-blade-formatter
-code --install-extension sianglim.slim
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension streetsidesoftware.code-spell-checker-spanish
-code --install-extension syler.sass-indented
-code --install-extension teabyii.ayu
-code --install-extension Tyriar.lorem-ipsum
-code --install-extension usernamehw.errorlens
-code --install-extension vincaslt.highlight-matching-tag
-code --install-extension wayou.vscode-todo-highlight
-code --install-extension whizkydee.material-palenight-theme
-code --install-extension Willumz.generic-pseudocode
-code --install-extension wingrunr21.vscode-ruby
-code --install-extension wix.vscode-import-cost
-code --install-extension xdebug.php-debug
-code --install-extension yzhang.markdown-all-in-one
-code --install-extension Zignd.html-css-class-completion
+aki77.rails-db-schema
+aliariff.vscode-erb-beautify
+amiralizadeh9480.laravel-extra-intellisense
+Angular.ng-template
+austenc.laravel-blade-spacer
+BeardedBear.beardedtheme
+bierner.color-info
+bierner.emojisense
+bmewburn.vscode-intelephense-client
+bradlc.vscode-tailwindcss
+brittanychiang.halcyon-vscode
+bung87.rails
+bung87.vscode-gemfile
+castwide.solargraph
+christian-kohler.path-intellisense
+codezombiech.gitignore
+DavidAnson.vscode-markdownlint
+dbaeumer.vscode-eslint
+ecmel.vscode-html-css
+EditorConfig.EditorConfig
+esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+formulahendry.code-runner
+IBM.output-colorizer
+junstyle.php-cs-fixer
+kaiwood.endwise
+kisstkondoros.vscode-gutter-preview
+kokororin.vscode-phpfmt
+manuelpuyol.erb-linter
+marlon407.code-groovy
+mattpocock.ts-error-translator
+Mikael.Angular-BeastCode
+mikestead.dotenv
+misogi.ruby-rubocop
+ms-vscode-remote.remote-wsl
+naumovs.color-highlight
+nhoizey.gremlins
+oderwat.indent-rainbow
+onecentlin.laravel-blade
+onecentlin.laravel5-snippets
+patbenatar.advanced-new-file
+PKief.material-icon-theme
+pmneo.tsimporter
+pranaygp.vscode-css-peek
+rebornix.ruby
+ritwickdey.LiveServer
+shardulm94.trailing-spaces
+shufo.vscode-blade-formatter
+sianglim.slim
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-spanish
+syler.sass-indented
+tamasfe.even-better-toml
+teabyii.ayu
+Tyriar.lorem-ipsum
+usernamehw.errorlens
+vincaslt.highlight-matching-tag
+wayou.vscode-todo-highlight
+whizkydee.material-palenight-theme
+Willumz.generic-pseudocode
+wingrunr21.vscode-ruby
+wix.vscode-import-cost
+xdebug.php-debug
+yzhang.markdown-all-in-one
+Zignd.html-css-class-completion
