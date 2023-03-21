@@ -1,0 +1,87 @@
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$nodejs\
+$php\
+$ruby\
+$gradle\
+$java\
+$cmd_duration $jobs\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[directory]
+style = "white"
+read_only = " 🔒"
+truncation_length = 2
+truncate_to_repo = false
+
+[character]
+success_symbol = "[•](purple)"
+error_symbol = "[✗](bold red)"
+vicmd_symbol = "[_](green)"
+
+[jobs]
+symbol = "⚙"
+style = "bold bright-blue"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[os]
+disabled = false
+
+[os.symbols]
+Windows = " "
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bright-purple"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "yellow"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-purple"
+
+[git_metrics]
+disabled = false
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+style = "italic green"
+
+[java]
+format = "[$symbol(${version} )]($style)"
+style = "italic bright-red"
+symbol = "☕ "
+
+[gradle]
+format = "[$symbol(${version} )]($style)"
+style = "italic bright-cyan"
+symbol= "🐘 "
+
+
+[php]
+format = "[$symbol($version )]($style)"
+style = "147 italic"
+
+[ruby]
+format = "[$symbol($version )]($style)"
+style = "italic bright-red"
