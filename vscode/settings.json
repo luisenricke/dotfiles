@@ -1,13 +1,13 @@
 {
   // #region vscode configuration
   // Theme
-  "workbench.colorTheme": "Bearded Theme Vivid Black",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "symbols",
   "window.title": "${activeEditorShort} ${separator}  ${rootName}",
   "window.zoomLevel": 0.95,
 
   // Font
-  "editor.fontFamily": "IBM Plex Mono Bold, Hasklig, Fira Code, Consolas",
+  "editor.fontFamily": "VictorMono Nerd Font Propo Bold, MesloLGL Nerd Font,IBM Plex Mono Bold, Hasklig, Fira Code, Consolas",
   "editor.fontSize": 12,
   "editor.fontLigatures": true,
 
@@ -137,10 +137,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
-  },
-
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -150,59 +146,13 @@
   },
   // #endregion
 
-  // #region PHP
-  "[php]": {
-    "editor.defaultFormatter": "kokororin.vscode-phpfmt"
-  },
-
-  "php.suggest.basic": false,
-  "php.validate.enable": true,
-  "php.validate.executablePath": "C:/tools/php/php-8.0.20-Win32-vs16-x64/php.exe",
-
-  "intelephense.environment.phpVersion": "7.2.34",
-  "intelephense.format.enable": false,
-  "intelephense.format.braces": "psr12",
-
-  "phpfmt.php_bin": "C:/tools/php/php-8.0.20-Win32-vs16-x64/php.exe",
-  "php.debug.executablePath": "C:/tools/php/php-8.0.20-Win32-vs16-x64/php.exe",
-
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1656047836722,
-
-  "[blade]": {
-    "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
-  },
-
-  "blade.format.enable": false,
-  "bladeFormatter.format.enabled": true,
-  // #endregion
-
-  // #region Ruby
-  "ruby.useBundler": true, //run non-lint commands with bundle exec
-  "ruby.useLanguageServer": true, // use the internal language server (see below)
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true // enable rubocop via bundler
-    },
-    "reek": {
-      "useBundler": true // enable reek via bundler
-    }
-  },
-  "ruby.format": "rubocop", // use rubocop for formatting
-
-  "[erb]": {
-    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
-  },
-  // #endregion
-
   // #region Noisy configuration
   "workbench.settings.enableNaturalLanguageSearch": false,
   "extensions.ignoreRecommendations": true,
   "workbench.tips.enabled": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "git.ignoreMissingGitWarning": true,
-  "explorer.openEditors.visible": 0,
+  "explorer.openEditors.visible": 1,
   "window.restoreWindows": "none",
   // #endregion
 
@@ -286,6 +236,8 @@
       "isWholeLine": false,
       "overviewRulerColor": "#acdeaa"
     }
-  ]
+  ],
+  "editor.linkedEditing": true,
+  "glassit.alpha": 240
   // #endregion
 }
