@@ -58,6 +58,15 @@ Import-Module posh-git
 z 'C:\Users\user\nested\folder'
 ```
 
+## Install fonts
+
+```shell
+.\install-nerd-font.ps1 -FontName "FiraCode"
+.\install-nerd-font.ps1 -FontName "VictorMono"
+.\install-nerd-font.ps1 -FontName "Meslo"
+.\install-nerd-font.ps1 -FontName "IBMPlexMono"
+```
+
 ---
 
 ### References
