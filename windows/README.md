@@ -66,7 +66,6 @@ z 'C:\Users\user\nested\folder'
 - [Blog - My Ultimate PowerShell prompt with Oh My Posh and the Windows Terminal](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal)
 - [Blog - Adding Predictive IntelliSense to my Windows Terminal PowerShell Prompt with PSReadline](https://www.hanselman.com/blog/adding-predictive-intellisense-to-my-windows-terminal-powershell-prompt-with-psreadline)
 - [Blog - Spend less time CD'ing around directories with the PowerShell Z shortcut](https://www.hanselman.com/blog/spend-less-time-cding-around-directories-with-the-powershell-z-shortcut)
-- [Doc - Oh my posh](https://ohmyposh.dev/docs)
 - [Doc - Posh-Git](https://github.com/dahlbyk/posh-git)
 
 ## Composer
